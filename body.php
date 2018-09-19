@@ -1,3 +1,5 @@
-		<p>hello world!</p>
-	</body>
+<?php
+echo '<body>
+	<p>hello world!</p>
+	</body>';
 
