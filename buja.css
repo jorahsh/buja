@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 }
+
 .nav-bar {
 	background-color: #000;
 	color: grey;
@@ -10,15 +11,29 @@ body {
 	flex-direction: column;
 	justify-content: center;
 }
+
 .nav-logo {
 	display: inline-flex;
 	position: sticky;
 	left: 3%;
 }
+
 .user-icon {
 	float: right;
 	margin-top: 10px;
 }
+
 .menu-icon {
 	float: right;
+}
+
+.welcome-box {
+	width: 40%;
+	height: 60%;
+	background-color: blue;
+}
+
+.welcom-box-header {
+	height: 10%;
+	background-color: #eee;
 }
