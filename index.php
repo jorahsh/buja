@@ -22,5 +22,5 @@
 #	</body
 #<?php
 #	echo '<p>this is php</p>'
-	#?>
+#
 #</html>
