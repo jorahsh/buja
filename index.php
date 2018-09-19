@@ -1,6 +1,6 @@
 <?php
 	require('vendor/autoload.php');
-?>
+	require('head.php');
 <html>
 	
 	<link rel="stylesheet" type="text/css" href="buja.css"/>
