@@ -29,14 +29,14 @@ body {
 
 .welcome-box {
 	width: 60%;
-	height: 60%;
+	height: 80%;
 	position: absolute;
 	left: 20%;
-	top: 30%;
+	top: 20%;
 	background-color: blue;
 }
 
-.welcom-box-header {
+.welcome-box-header {
 	height: 10%;
 	background-color: #eee;
 }
