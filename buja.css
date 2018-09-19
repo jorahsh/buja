@@ -30,6 +30,8 @@ body {
 .welcome-box {
 	width: 40%;
 	height: 60%;
+	right: 50%;
+	top: 10%;
 	background-color: blue;
 }
 
