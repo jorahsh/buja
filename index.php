@@ -18,6 +18,6 @@
 		<p>Hello world!</p>
 	</body
 <?php
-	echo "this is php"
+	echo '<p>this is php</p>'
 ?>
 </html>
