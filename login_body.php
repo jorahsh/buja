@@ -12,6 +12,7 @@ echo '<body>
 			passowrd: <input type="text" name="password"><br>
 			<input type="submit" value="submit">
 		</form>
+		<p>-or-</p>
 		<form method="post" action="create_account_handler.php">
 			<input type="submit" value="create account">
 		</form>
