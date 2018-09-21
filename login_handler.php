@@ -1,4 +1,4 @@
 <?php
 $_POST
-	header('Location: https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]/main.php');
+	header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 exit;
