@@ -1,4 +1,4 @@
 <?php
 $_POST
-	header('main.php');
+	header('Location: main.php');
 exit;
