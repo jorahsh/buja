@@ -1,5 +1,5 @@
 <?php
-	echo '<div class="main-body">
+	echo '<div class="main-container">
 			<img src="./img/left-arrow-circle.png">
 			<div class="movie-poster-box">
 			</div>
