@@ -58,10 +58,14 @@ body {
 
 .left-arrow {
 	float: left;
+	position: absolute;
+	top: 50%;
 }
 
 .right-arrow {
 	float: right;
+	position: absolute;
+	top: 50%;
 }
 
 .genre-bar {
