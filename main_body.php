@@ -9,5 +9,5 @@ echo '<div class="main-container">
 	<div class="right-arrow">
 		<img src="./img/right-arrow-circle.png">
 	</div>
-	</div>
-	<div class="genre-bar"></div>';
+	<div class="genre-bar"></div>
+</div>';
