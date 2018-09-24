@@ -6,4 +6,4 @@
 			<img src="./img/right-arrow-circle.png">
 		</div>
 		<div class="genre-bar">
-		</div>
+		</div>';
