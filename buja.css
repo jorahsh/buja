@@ -34,12 +34,16 @@ body {
 	position: absolute;
 	left: 20%;
 	top: 20%;
-	background-color: rgba(190, 190, 190, 0.7);
+	background-color: rgb(190, 190, 190);
 }
 
 .welcome-box-header {
 	height: 10%;
 	background-color: #eee;
+}
+
+.welcome-box-header-text {
+	vertical-align: middle;
 }
 
 .welcome-box-title {

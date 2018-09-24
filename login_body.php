@@ -2,7 +2,7 @@
 echo '<body>
 	<div class="welcome-box">
 		<div class="welcome-box-header">
-			<span>Welcome to Buja friend!</span>
+			<span class="welcome-box-header-text">Welcome to Buja friend!</span>
 		<div>
 		<h3 class="welcom-box-title">Don\'t know what to watch?</h3>
 		<p>Buja is the world\'s leading provider in Netflix
