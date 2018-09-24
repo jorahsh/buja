@@ -43,7 +43,7 @@ body {
 }
 
 .welcome-box-header-text {
-	vertical-align: middle;
+	line-height: 10px;
 }
 
 .welcome-box-title {
