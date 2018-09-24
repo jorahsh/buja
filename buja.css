@@ -57,18 +57,21 @@ body {
 }
 
 .left-arrow {
+	position: fixed;
 	float: left;
 	top: 50%;
 }
 
 .right-arrow {
+	position: fixed;
 	float: right;
 	top: 50%;
 }
 
 .movie-poster {
 	position: fixed;
-	left: 45%;
+	left: 40%;
+	top: 40%;
 }
 
 .genre-bar {
