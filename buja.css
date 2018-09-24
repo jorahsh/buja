@@ -76,4 +76,6 @@ body {
 	height: 10%;
 	max-height: 60px;
 	background-color: black;
+	position: absolute;
+	top 60%;
 }
