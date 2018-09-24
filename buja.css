@@ -58,20 +58,20 @@ body {
 
 .left-arrow {
 	position: fixed;
-	float: left;
-	top: 50%;
+	left: 5%;
+	top: 20%;
 }
 
 .right-arrow {
 	position: fixed;
-	float: right;
-	top: 50%;
+	right: 5%;
+	top: 20%;
 }
 
 .movie-poster {
 	position: fixed;
 	left: 40%;
-	top: 40%;
+	top: 20%;
 }
 
 .genre-bar {
