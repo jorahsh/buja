@@ -43,7 +43,8 @@ body {
 }
 
 .welcome-box-header-text {
-	line-height: 10px;
+	position: absolute;
+	top: 50%;
 }
 
 .welcome-box-title {
