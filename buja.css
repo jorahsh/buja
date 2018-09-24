@@ -58,13 +58,13 @@ body {
 
 .left-arrow {
 	float: left;
-	position: absolute;
+	position: fixed;
 	top: 50%;
 }
 
 .right-arrow {
 	float: right;
-	position: absolute;
+	position: fixed;
 	top: 50%;
 }
 
