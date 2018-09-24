@@ -13,7 +13,7 @@ echo '<body>
 			<input type="submit" value="submit">
 		</form>
 		<p>-or-</p>
-		<form method="post" action="create_account_handler.php">
+		<form method="get" action="create_account_handler.php">
 			<input type="submit" value="create account">
 		</form>
 	<div>
