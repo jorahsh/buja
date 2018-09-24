@@ -59,13 +59,13 @@ body {
 .left-arrow {
 	position: fixed;
 	left: 5%;
-	top: 20%;
+	top: 40%;
 }
 
 .right-arrow {
 	position: fixed;
 	right: 5%;
-	top: 20%;
+	top: 40%;
 }
 
 .movie-poster {
