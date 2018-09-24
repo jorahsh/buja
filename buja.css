@@ -56,10 +56,12 @@ body {
 	justify-content: center;
 }
 
-.movie-poster-box {
-	height: auto;
-	width: auto;
-	background-color: white;
+.left-arrow {
+	float: left;
+}
+
+.right-arrow {
+	float: right;
 }
 
 .genre-bar {
