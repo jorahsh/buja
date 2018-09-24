@@ -59,8 +59,6 @@ body {
 .movie-poster-box {
 	height: auto;
 	width: auto;
-	max-height: 700px;
-	max-width: 500px;
 	background-color: white;
 }
 
