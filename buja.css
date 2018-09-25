@@ -96,14 +96,14 @@ body {
 }
 
 .genre-tab {
-	background-color: #DDD;
+	background-color: #BBB;
 }
 
 li {
 	display: inline;
 	width: 100px;
 	font-size: 14px;
-	color: #DDD;
+	color: #EEE;
 }
 
 .footer {
