@@ -1,6 +1,6 @@
 <?php
 echo '<div class="main-container">
-	<div class="left-arrow-cirlce">
+	<div class="left-arrow-circle">
 		<img src="./img/left-arrow-circle.png">
 	</div>
 	<div class="movie-poster">
