@@ -82,9 +82,6 @@ body {
 	background-color: black;
 	position: absolute;
 	top: 80%;
-	display: inline-flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 .grey-arrow-left {
