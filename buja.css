@@ -52,6 +52,7 @@ body {
 
 .main-container {
 	height: auto;
+	overflow: auto;
 }
 
 .left-arrow-circle {
