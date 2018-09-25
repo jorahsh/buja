@@ -17,7 +17,9 @@ echo '<div class="main-container">
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 
 foreach($genres as $genre){
-	echo "<li> $genre </li>";
+	echo '<span class="genre-tab">';
+	echo "<li class> $genre </li>";
+	echo '</span>';
 }
 
 echo	'</ul>
