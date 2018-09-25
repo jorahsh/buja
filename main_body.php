@@ -11,7 +11,7 @@ echo '<div class="main-container">
 	</div>
 	<div class="genre-bar">
 		<img class= "grey-arrow-right" src="./img/grey-arrow-right.png">
-		<img class= "grey-arrow-left" src="./img/grey-arrow-left.png">'
+		<img class= "grey-arrow-left" src="./img/grey-arrow-left.png">';
 
 $genres = ['comedy', 'horror', 'action', 'drama', 'animated', 'family'];
 
