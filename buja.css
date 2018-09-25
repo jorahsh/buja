@@ -96,7 +96,11 @@ body {
 }
 
 .genre-tab {
-	background-color: #BBB;
+	background-color: #AAA;
+	width: 100px;
+	height: 50px;
+	margin: 5px;
+	text-align: center;
 }
 
 li {
