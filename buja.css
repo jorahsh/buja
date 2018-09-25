@@ -96,6 +96,10 @@ body {
 }
 
 .genre-tab {
+	background-color: #DDD;
+}
+
+li {
 	display: inline;
 	width: 100px;
 	font-size: 14px;
