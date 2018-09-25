@@ -82,7 +82,7 @@ body {
 	background-color: black;
 	position: absolute;
 	top: 80%;
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
 	justify-content: center;
 }
