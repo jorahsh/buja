@@ -91,6 +91,15 @@ body {
 	margin: 4px 4px;
 }
 
+.genre-list {
+	list-style-type: none;
+}
+
+li {
+	display: block;
+	width: 100px;
+}
+
 .footer {
 	font-size: 14px;
 	color: #DDD;
