@@ -88,11 +88,11 @@ body {
 }
 
 .grey-arrow-left {
-	
+	float: left;
 }
 
 .grey-arrow-right {
-	
+	float: right;
 }
 
 .footer {
