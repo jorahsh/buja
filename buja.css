@@ -57,13 +57,13 @@ body {
 	justify-content: center;*/
 }
 
-.left-arrow {
+.left-arrow-cirlce {
 	position: fixed;
 	left: 5%;
 	top: 40%;
 }
 
-.right-arrow {
+.right-arrow-cirlce {
 	position: fixed;
 	right: 5%;
 	top: 40%;
