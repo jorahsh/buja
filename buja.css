@@ -95,7 +95,7 @@ body {
 	list-style-type: none;
 }
 
-li {
+.genre-tab {
 	display: inline;
 	width: 100px;
 	font-size: 14px;
