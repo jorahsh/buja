@@ -10,11 +10,7 @@ echo '<div class="main-container">
 		<img src="./img/right-arrow-circle.png">
 	</div>
 	<div class="genre-bar">
-		<div class="grey-arrow-right">
-			<img src="./img/grey-arrow-right.png">
-		</div>
-		<div class="grey-arrow-left">
-			<img src="./img/grey-arrow-left.png">
-		</div>
+		<img class= "grey-arrow-right" src="./img/grey-arrow-right.png">
+		<img class= "grey-arrow-left" src="./img/grey-arrow-left.png">
 	</div>
 </div>';
