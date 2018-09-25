@@ -57,13 +57,13 @@ body {
 	justify-content: center;*/
 }
 
-.left-arrow-cirlce {
+.left-arrow-circle {
 	position: fixed;
 	left: 5%;
 	top: 40%;
 }
 
-.right-arrow-cirlce {
+.right-arrow-circle {
 	position: fixed;
 	right: 5%;
 	top: 40%;
@@ -85,6 +85,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.grey-left-arrow {
+	float: left;
+}
+
+.grey-right-arrow {
+	float: right;
 }
 
 .footer {
