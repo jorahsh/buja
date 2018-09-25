@@ -96,8 +96,10 @@ body {
 }
 
 li {
-	display: block;
+	display: inline;
 	width: 100px;
+	font-size: 14px;
+	color: #DDD;
 }
 
 .footer {
