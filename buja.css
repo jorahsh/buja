@@ -93,6 +93,7 @@ body {
 
 .genre-list {
 	list-style-type: none;
+	padding: 0;
 }
 
 .genre-tab {
