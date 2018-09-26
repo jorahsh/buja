@@ -103,7 +103,7 @@ body {
 	height: 50px;
 	margin: 0 14%;
 	text-align: center;
-	display: inline;
+	display: inline-block;
 	font-size: 14px;
 }
 
