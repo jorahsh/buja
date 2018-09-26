@@ -40,13 +40,16 @@ body {
 .welcome-box-header {
 	height: 10%;
 	background-color: #eee;
+}
+
+.welcome-box-header-text {
 	margin-left: 20%;
 }
 
 
 .welcome-box-title {
 	font-size: 14px;
-	margin-left: 20%;
+	padding: 0 10%;
 }
 
 .main-container {
