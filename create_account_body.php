@@ -3,7 +3,7 @@ echo '<body>
 	<div class="main-container">
 	<div class="welcome-box">
 		<div class="welcome-box-header">
-			<span class="welcome-box-header-text>
+			<span class="welcome-box-header-text">
 				One of us...One of us...
 			</span>
 		</div>
