@@ -1,6 +1,6 @@
 <?php
 echo '<body>
-	<div class="main-container"
+	<div class="main-container">
 	<div class="welcome-box">
 		<div class="welcome-box-header">
 			<span>One of us...One of us...</span>
