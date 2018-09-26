@@ -15,7 +15,7 @@ echo '<body>
 			<div class="password-input">
 				passowrd: <input type="text" name="password">
 			</div>
-			<div "submit-button">
+			<div class="submit-button">
 				<input type="submit" value="submit">
 			</div>
 		</form>
