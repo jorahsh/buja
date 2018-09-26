@@ -103,13 +103,8 @@ body {
 	height: 50px;
 	margin: 0 4%;
 	text-align: center;
-}
-
-li {
 	display: inline;
-	width: 100px;
 	font-size: 14px;
-	color: #EEE;
 }
 
 .footer {
