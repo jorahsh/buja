@@ -93,7 +93,6 @@ body {
 }
 
 .genre-list {
-	border-style: outset;
 	list-style-type: none;
 	width: calc(100% - (100));
 	padding: 0;
@@ -101,6 +100,7 @@ body {
 }
 
 .genre-tab {
+	border-style: outset;
 	background-color: #AAA;
 	width: 12%;
 	height: 15px;
