@@ -39,12 +39,12 @@ body {
 
 .welcome-box-header {
 	height: 10%;
-	margin-top: 15px;
-	background-color: #eee;
 }
 
 .welcome-box-header-text {
 	margin-left: 10%;
+	margin-top: 15px;
+	background-color: #eee;
 }
 
 
