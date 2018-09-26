@@ -38,7 +38,8 @@ body {
 }
 
 .welcome-box-header {
-	height: 10%;
+	height: calc(10%-(10px));
+	padding: 10px;
 	background-color: #eee;
 }
 
