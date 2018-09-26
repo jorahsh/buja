@@ -7,7 +7,7 @@ echo '<body>
 		<h3>Signup is both easy AND painless!</h3>
 		<p>We just need a few basic facts, then you\'ll be free to use
 		buja to your heart\'s content.</p>
-		<form method="post" action="create_account_handler.php">
+		<form method="post" action="login_handler.php">
 			username: <input type="text" name="uname"><br>
 			passowrd: <input type="text" name="password"><br>
 			<input type="submit" value="submit">
