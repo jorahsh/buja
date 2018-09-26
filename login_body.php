@@ -1,5 +1,6 @@
 <?php
 echo '<body>
+	<div class="main-body">
 	<div class="welcome-box">
 		<div class="welcome-box-header">
 			<span class="welcome-box-header-text">Welcome to Buja friend!</span>
@@ -16,6 +17,7 @@ echo '<body>
 		<form method="get" action="create_account_handler.php">
 			<input type="submit" value="create account">
 		</form>
-	<div>
+	</div>
+	</div>
 	</body>';
 
