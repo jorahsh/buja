@@ -34,6 +34,7 @@ body {
 	position: absolute;
 	left: 20%;
 	top: 20%;
+	margin-left: 20%;
 	background-color: rgb(190, 190, 190);
 }
 
@@ -42,9 +43,6 @@ body {
 	background-color: #eee;
 }
 
-.welcome-box-header-text {
-
-}
 
 .welcome-box-title {
 	font-size: 14px;
