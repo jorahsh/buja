@@ -102,10 +102,9 @@ body {
 	background-color: #AAA;
 	width: 14%;
 	height: 30px;
-	margin: 15px 0;
+	margin: 15px 2%;
 	padding: 0;
 	text-align: center;
-	line-height: 15px;
 	display: inline-block;
 	font-size: 14px;
 }
