@@ -55,6 +55,11 @@ body {
 	overflow: hidden;
 }
 
+.username-input {
+	position: absolute;
+	top 50%;
+}
+
 .left-arrow-circle {
 	position: fixed;
 	left: 5%;
