@@ -34,7 +34,7 @@ body {
 	position: absolute;
 	left: 20%;
 	top: 20%;
-	border-style:outset;
+	border-style:inset;
 	background-color: rgb(190, 190, 190);
 }
 
