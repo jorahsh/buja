@@ -57,7 +57,12 @@ body {
 
 .username-input {
 	position: absolute;
-	top 50%;
+	top: 60%;
+}
+
+.password-input {
+	position: absolute;
+	top: 55%;
 }
 
 .left-arrow-circle {
