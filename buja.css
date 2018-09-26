@@ -67,7 +67,12 @@ body {
 
 .submit-button {
 	position: absolute;
-	top: 60%;
+	top: 65%;
+}
+
+.create-account {
+	position: absolute;
+	top: 75%;
 }
 
 .left-arrow-circle {

@@ -19,10 +19,12 @@ echo '<body>
 				<input type="submit" value="submit">
 			</div>
 		</form>
-		<p>-or-</p>
-		<form method="get" action="create_account_handler.php">
-			<input type="submit" value="create account">
-		</form>
+		<div class="create-account">
+			<p>-or-</p>
+			<form method="get" action="create_account_handler.php">
+				<input type="submit" value="create account">
+			</form>
+		</div>
 	</div>
 	</div>
 </body>';
