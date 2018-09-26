@@ -94,13 +94,14 @@ body {
 
 .genre-list {
 	list-style-type: none;
+	width: auto;
 	padding: 0;
 	margin: 0 auto;
 }
 
 .genre-tab {
 	background-color: #AAA;
-	width: 10%;
+	width: 12%;
 	height: 30px;
 	margin: 15px 2%;
 	padding: 0;
