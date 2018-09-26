@@ -4,7 +4,7 @@ echo '<body>
 	<div class="welcome-box">
 		<div class="welcome-box-header">
 			<span>One of us...One of us...</span>
-		<div>
+		</div>
 		<h3>Signup is both easy AND painless!</h3>
 		<p>We just need a few basic facts, then you\'ll be free to use
 		buja to your heart\'s content.</p>
