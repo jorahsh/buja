@@ -95,6 +95,7 @@ body {
 .genre-list {
 	list-style-type: none;
 	width: calc(100% - (100px));
+	overflow: visible;
 	padding: 0;
 	margin: 0 50px;
 }
