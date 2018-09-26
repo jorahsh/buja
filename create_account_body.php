@@ -20,7 +20,7 @@ echo '<body>
 			</div>
 			<div class="password-input">
 				passowrd: <input type="text" name="password">
-			<div>
+			</div>
 			<div class="submit-button">
 				<input type="submit" value="submit">
 			</div>
