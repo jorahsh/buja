@@ -4,7 +4,7 @@ echo '<body>
 	<div class="welcome-box">
 		<div class="welcome-box-header">
 			<span class="welcome-box-header-text">Welcome to Buja friend!</span>
-		<div>
+		</div>
 		<h3 class="welcom-box-title">Don\'t know what to watch?</h3>
 		<p>Buja is the world\'s leading provider in Netflix
 		recommendations, and we want to tell you what to watch!</p>
@@ -19,5 +19,5 @@ echo '<body>
 		</form>
 	</div>
 	</div>
-	</body>';
+</body>';
 
