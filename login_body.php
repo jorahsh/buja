@@ -9,9 +9,15 @@ echo '<body>
 		<p>Buja is the world\'s leading provider in Netflix
 		recommendations, and we want to tell you what to watch!</p>
 		<form method="post" action="login_handler.php">
-			username: <input type="text" name="uname"><br>
-			passowrd: <input type="text" name="password"><br>
-			<input type="submit" value="submit">
+			<div class="username-input">
+				username: <input type="text" name="uname">
+			</div>
+			<div class="password-input">
+				passowrd: <input type="text" name="password">
+			</div>
+			<div "submit-button">
+				<input type="submit" value="submit">
+			</div>
 		</form>
 		<p>-or-</p>
 		<form method="get" action="create_account_handler.php">
