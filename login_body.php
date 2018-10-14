@@ -6,7 +6,13 @@ session_start();
 
 <body>
 	<div class="main-container">
+<?php
 
+if (isset($_SESSION['login_error'])) {
+	foreach($_SESSION['login_error'] as $message) { ?>
+		<div class="login_error"><?php echo $message; ?></div>
+<?php	}
+} ?>
 	<div class="welcome-box">
 		<div class="welcome-box-header">
 			<span class="welcome-box-header-text">Welcome to Buja friend!</span>
