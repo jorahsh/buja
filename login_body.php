@@ -9,7 +9,6 @@ session_start();
 <?php
 
 if (isset($_SESSION['login_error'])) { ?>
-<h1>OH LAWD HE'S COMIN!</h1>
 <?php	foreach($_SESSION['login_error'] as $message) { ?>
 		<div class="login_error"><?php echo $message; ?></div>
 <?php	}
