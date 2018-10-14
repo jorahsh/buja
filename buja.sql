@@ -1,0 +1,24 @@
+CREATE TABLE user (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(256) NOT NULL,
+	password varchar(64) NOT NULL,
+	access INTEGER(1)
+);
+
+CREATE TABLE movie (
+	id INT NOT NULL PRIMARY KEY,
+	title VARCHAR(128) NOT NULL,
+	rating VARCHAR(8) NOT NULL,
+	year INT NOT NULL,
+	runtime VARCHAR(32) NOT NULL,
+	description VARCHAR(1024) NOT NULL,
+	language VARCHAR(32),
+	poster VARCHAR(64),
+	rating DECIMAL(2,2) NOT NULL
+);
+	
+CREATE TABLE user_movie (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	user_id INT NOT NULL,
+	movie_id INT NOT NULL
+);

@@ -1,6 +1,20 @@
 <?php
-echo '<body>
+
+session_start();
+
+?>
+
+<body>
 	<div class="main-container">
+<?php
+
+	if (isset($_SESSION['login_error']) {
+		for ($_SESSION['login_error'] as $message) {
+			echo "<p> $message </p>";
+		}
+	}
+?>
+
 	<div class="welcome-box">
 		<div class="welcome-box-header">
 			<span class="welcome-box-header-text">Welcome to Buja friend!</span>
@@ -14,7 +28,7 @@ echo '<body>
 		</div>
 		<form method="post" action="login_handler.php">
 			<div class="username-input">
-				username: <input type="text" name="uname">
+				username: <input type="text" name="username">
 			</div>
 			<div class="password-input">
 				passowrd: <input type="text" name="password">
@@ -31,5 +45,5 @@ echo '<body>
 		</div>
 	</div>
 	</div>
-</body>';
+</body>
 
