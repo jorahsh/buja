@@ -4,8 +4,8 @@ session_start();
 
 echo "<h1>OH LAWD HE'S COMIN!</h1>";
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username;
+$password;
 
 if (!isset($username) {
 	$_SESSION['login_error'][] = 'please enter a username';
