@@ -19,7 +19,7 @@ class Buja_Dao {
 				$db['default']['username'], $db['default']['password']);
 		}
 		catch (Exception $e){
-
+			$this->log.LogFatal($e);
 		}
 		return $conn;
 	}
