@@ -5,15 +5,15 @@ session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if (!isset($username)) {
+if (empty($username)) {
 	$_SESSION['login_error'][] = 'please enter a username';
 }
 
-if (!isset($password)) {
+if (empty($password)) {
 	$_SESSION['login_error'][] = 'please enter a password';
 }
 
-if (empty($_SESSION['login_error'])) {
+if (isset($_SESSION['login_error'])) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
 }
 else {

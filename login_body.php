@@ -8,7 +8,7 @@ session_start();
 	<div class="main-container">
 <?php
 
-if (!empty($_SESSION['login_error'])) { ?>
+if (isset($_SESSION['login_error'])) { ?>
 <h1>OH LAWD HE'S COMIN!</h1>
 <?php	foreach($_SESSION['login_error'] as $message) { ?>
 		<div class="login_error"><?php echo $message; ?></div>
