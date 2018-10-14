@@ -10,7 +10,7 @@ $password = $_POST['password'];
 if (empty($username)) {
 	$_SESSION['login_error'][] = 'please enter a username';
 }
-else if (empty($password)) {
+elseif (empty($password)) {
 	$_SESSION['login_error'][] = 'please enter a password';
 }
 else {
