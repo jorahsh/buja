@@ -7,7 +7,7 @@ class Buja_Dao {
 
 	private $log;
 
-	public function __construct () {
+	public function __construct() {
 		$this->log = new KLogger("db_log.txt", KLogger::INFO);
 		$this->log->LogInfo("successfully created Buja_Dao!");
 	}
@@ -18,8 +18,8 @@ class Buja_Dao {
 			$conn = new PDO("mysql: host={$db['default']['hostname']};dbname={$db['default']['database']}", 
 				$db['default']['username'], $db['default']['password']);
 		}
-		catch (Exception $e){
-			$this->log.LogFatal($e);
+		catch (Exception $e) {
+			$this->log->LogFatal($e);
 		}
 		return $conn;
 	}
@@ -27,13 +27,18 @@ class Buja_Dao {
 	public getUser($username, $password) {
 		$sql = "select * from user where user.username = :username and user.password = :password";
 		$conn = $this->getConnection();
-		$stmt = $conn->prepare($sql);
-		$stmt->bindParam(":username", $username);
-		$stmt->bindParam(":password", $password);
-		$stmt->execute();
-		$stmt->bind_result($ret);
-		$stmt->fetch();
-		$conn = null;
+		try {
+			$stmt = $conn->prepare($sql);
+			$stmt->bindParam(":username", $username);
+			$stmt->bindParam(":password", $password);
+			$stmt->execute();
+			$stmt->bind_result($ret);
+			$stmt->fetch();
+			$conn = null;
+		}
+		catch (Exception $e) {
+			$this->log->LogFatal($e);
+		}
 		return $ret;
 	}
 
@@ -41,10 +46,14 @@ class Buja_Dao {
 		$sql = "insert into user (username, email, password, access) values(:username, :email, :password, 1)";
 		$conn = $this->getConnection();
 		$stmt = $conn->prepare($sql);
-		$stmt->bindParam(":username", $username);
-		$stmt->bindParam(":email", $email);
-		$stmt->bindParam(":password", $password);
-		$stmt->execute();
-		$conn = null;
+		try {
+			$stmt->bindParam(":username", $username);
+			$stmt->bindParam(":email", $email);
+			$stmt->bindParam(":password", $password);
+			$stmt->execute();
+			$conn = null;
+		catch (Exception $e) {
+			$this->log->LogFatal($e);
+		}
 	}
 }
