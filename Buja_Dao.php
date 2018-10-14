@@ -24,7 +24,7 @@ class Buja_Dao {
 		return $conn;
 	}
 
-	public getUser($username, $password) {
+	public function getUser($username, $password) {
 		$sql = "select * from user where user.username = :username and user.password = :password";
 		$conn = $this->getConnection();
 		try {
@@ -42,7 +42,7 @@ class Buja_Dao {
 		return $ret;
 	}
 
-	public setUser($username, $email, $password) {
+	public function setUser($username, $email, $password) {
 		$sql = "insert into user (username, email, password, access) values(:username, :email, :password, 1)";
 		$conn = $this->getConnection();
 		$stmt = $conn->prepare($sql);
