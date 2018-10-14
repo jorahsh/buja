@@ -15,10 +15,10 @@ if (!isset($password) {
 
 if (isset($_SESSION['login_error'])) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
+	exit;
 }
 else {
+	$_SESSION['logged_in'] = 'true';
 	header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
+	exit;
 }
-
-exit;
-?>
