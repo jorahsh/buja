@@ -6,14 +6,6 @@ session_start();
 
 <body>
 	<div class="main-container">
-<?php
-
-	if (isset($_SESSION['login_error']) {
-		for ($_SESSION['login_error'] as $message) {
-			echo "<p> $message </p>";
-		}
-	}
-?>
 
 	<div class="welcome-box">
 		<div class="welcome-box-header">
