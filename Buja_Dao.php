@@ -52,6 +52,7 @@ class Buja_Dao {
 			$stmt->bindParam(":password", $password);
 			$stmt->execute();
 			$conn = null;
+		}
 		catch (Exception $e) {
 			$this->log->LogFatal($e);
 		}
