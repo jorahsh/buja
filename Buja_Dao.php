@@ -1,6 +1,6 @@
 <?php
 
-require_once 'database.php'
+require_once 'db_config.php'
 
 class Buja_Dao {
 
