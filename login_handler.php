@@ -17,7 +17,7 @@ if (empty($_SESSION['login_error'])) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
 }
 else {
-	$_SESSION['logged_in'] = 'true';
+	$_SESSION['logged_in'] = true;
 	header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 }
 exit;
