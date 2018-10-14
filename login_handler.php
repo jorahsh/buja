@@ -13,7 +13,7 @@ if (!isset($password)) {
 	$_SESSION['login_error'][] = 'please enter a password';
 }
 
-if (isset($_SESSION['login_error'])) {
+if (empty($_SESSION['login_error'])) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
 }
 else {
