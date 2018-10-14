@@ -16,7 +16,9 @@ if (empty($password)) {
 if (!isset($_SESSION['login_error'])) {
 	require_once 'Buja_Dao.php';
 	$dao = new Buja_Dao();
-	if ($dao->getUser($username,$password)){
+	$user = $dao->getUser($username,$password);
+	print($user);
+	if (){
 		$_SESSION['logged_in'] = true;
 		header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 	}
