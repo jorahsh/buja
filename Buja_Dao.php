@@ -1,12 +1,15 @@
 <?php
 
-require_once 'db_config.php'
+require_once 'db_config.php';
+require_once 'KLogger.php';
 
 class Buja_Dao {
 
+	private $log;
 
 	public function __Construct () {
-
+		$this->log = new KLogger("db_log.txt", KLogger::INFO);
+		$this->log->LogInfo("successfully created Buja_Dao!");
 	}
 
 
