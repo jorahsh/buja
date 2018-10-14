@@ -1,9 +1,9 @@
 CREATE TABLE user (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	username VARCHAR(256) UNIQUE NOT NULL,
-	email VARCHAR(256) UNIQUE NOT NULL,
-	password varchar(64) NOT NULL,
-	access INTEGER(1)
+	username VARCHAR(32) UNIQUE NOT NULL,
+	email VARCHAR(128) UNIQUE NOT NULL,
+	password varchar(32) NOT NULL,
+	access INT(1)
 );
 
 CREATE TABLE movie (
@@ -12,10 +12,10 @@ CREATE TABLE movie (
 	rating VARCHAR(8) NOT NULL,
 	year INT NOT NULL,
 	runtime VARCHAR(32) NOT NULL,
-	description VARCHAR(1024) NOT NULL,
 	language VARCHAR(32),
-	poster VARCHAR(64),
-	rating DECIMAL(2,2) NOT NULL
+	poster VARCHAR(128),
+	score DECIMAL(2,2) NOT NULL,
+	description VARCHAR(191) NOT NULL
 );
 	
 CREATE TABLE user_movie (
