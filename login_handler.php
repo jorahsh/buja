@@ -10,10 +10,12 @@ $password = $_POST['password'];
 if (empty($username)) {
 	$_SESSION['login_error'][] = 'please enter a username';
 }
-elseif (empty($password)) {
+
+if (empty($password)) {
 	$_SESSION['login_error'][] = 'please enter a password';
 }
-else {
+
+if (!isset($_SESSION['login_error'])) {
 	$dao = new Buja_Dao();
 	if ($dao.getUser($username,$password)){
 		$_SESSION['logged_in'] = true;
@@ -27,4 +29,5 @@ else {
 if (isset($_SESSION['login_error'])) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
 }
+
 exit;
