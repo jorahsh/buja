@@ -12,6 +12,7 @@ if (isset($_SESSION['login_error'])) { ?>
 <?php	foreach($_SESSION['login_error'] as $message) { ?>
 		<div class="login_error"><?php echo $message; ?></div>
 <?php	}
+unset($_SESSION['login_error']);
 } ?>
 	<div class="welcome-box">
 		<div class="welcome-box-header">
