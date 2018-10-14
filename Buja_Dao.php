@@ -1,10 +1,13 @@
 <?php
 
-require_once 'db_config.php';
 require_once 'KLogger.php';
 
 class Buja_Dao {
 
+	private $hostname = 'us-cdbr-iron-east-01.cleardb.net';
+	private $database = 'heroku_176bc87887e3e6a';
+	private $username = 'b3b1c0fdfa9db9';
+	private $password = 'a2ddf83c';
 	private $log;
 
 	public function __construct() {
@@ -15,8 +18,7 @@ class Buja_Dao {
 
 	public function getConnection() {
 		try {
-			$conn = new PDO("mysql: host={$db['default']['hostname']};dbname={$db['default']['database']}", 
-				$db['default']['username'], $db['default']['password']);
+			$conn = new PDO("mysql: host={$this->hostname};dbname={$this->database}", $this->username, $this->password);
 		}
 		catch (Exception $e) {
 			$this->log->LogFatal($e);
