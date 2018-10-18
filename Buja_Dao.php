@@ -5,9 +5,9 @@ require_once 'KLogger.php';
 class Buja_Dao {
 
 	private $hostname = 'us-cdbr-iron-east-01.cleardb.net';
-	private $database = 'heroku_a10cdf868be118a';
-	private $username = 'b046dc89c93083';
-	private $password = '2d5d094e';
+	private $database = 'heroku_176bc87887e3e6a';
+	private $username = 'b3b1c0fdfa9db9';
+	private $password = 'a2ddf83c';
 	private $log;
 
 	public function __construct() {
@@ -18,8 +18,7 @@ class Buja_Dao {
 
 	public function getConnection() {
 		try {
-			 echo "mysql: host={$this->hostname};dbname={$this->database}, {$this->username}, {$this->password}";
-			$conn = new PDO("mysql: host={$this->hostname};dbname={$this->database}", $this->username, $this->password);
+			$conn = new PDO("mysql: host=$this->hostname;dbname=$this->database", $this->username, $this->password);
 		}
 		catch (Exception $e) {
 			echo "$e";
