@@ -19,8 +19,10 @@ class Buja_Dao {
 	public function getConnection() {
 		try {
 			$conn = new PDO("mysql: host={$this->hostname};dbname={$this->database}", $this->username, $this->password);
+			echo $conn;
 		}
 		catch (Exception $e) {
+			echo $e;
 			$this->log->LogFatal($e);
 		}
 		return $conn;
