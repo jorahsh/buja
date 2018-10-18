@@ -30,7 +30,7 @@ unset($_SESSION['login_error']);
 				username: <input type="text" name="username">
 			</div>
 			<div class="password-input">
-				passowrd: <input type="text" name="password">
+				passowrd: <input type="password" name="password">
 			</div>
 			<div class="submit-button">
 				<input type="submit" value="login">
