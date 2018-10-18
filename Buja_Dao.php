@@ -5,9 +5,9 @@ require_once 'KLogger.php';
 class Buja_Dao {
 
 	private $hostname = 'us-cdbr-iron-east-01.cleardb.net';
-	private $database = 'heroku_176bc87887e3e6a';
-	private $username = 'b3b1c0fdfa9db9';
-	private $password = 'a2ddf83c';
+	private $database = 'heroku_a10cdf868be118a';
+	private $username = 'b046dc89c93083';
+	private $password = '2d5d094e';
 	private $log;
 
 	public function __construct() {
