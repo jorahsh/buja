@@ -14,6 +14,10 @@ class Buja_Dao {
 	public function __construct() {
 		$this->log = new KLogger("db_log.txt", KLogger::INFO);
 		$this->log->LogInfo("successfully created Buja_Dao!");
+		echo "hostname: {$db['default']['hostname']}";
+		echo "database: {$db['default']['database']}";
+		echo "username: {$db['default']['username']}";
+		echo "password: {$db['default']['password']}";
 	}
 
 
