@@ -1,6 +1,5 @@
 {
 	"require":{
 		"ext-pdo": "*",
-		"katzgrau/klogger": "dev-master"
 	}
 }
