@@ -4,6 +4,7 @@ require_once 'KLogger.php';
 
 class Buja_Dao {
 
+	private $socket = '/tmp/mysql.socket'
 	private $hostname = 'us-cdbr-iron-east-01.cleardb.net';
 	private $database = 'heroku_176bc87887e3e6a';
 	private $username = 'b3b1c0fdfa9db9';
@@ -18,7 +19,7 @@ class Buja_Dao {
 
 	public function getConnection() {
 		try {
-			$conn = new PDO("mysql: host={$this->hostname};dbname={$this->database}", $this->username, $this->password);
+			$conn = new PDO("mysql:unix_socket=${this->socket};host={$this->hostname};dbname={$this->database}", $this->username, $this->password);
 		}
 		catch (Exception $e) {
 			echo $e;
