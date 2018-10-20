@@ -24,16 +24,16 @@ unset($_SESSION['create_error']);
 			</p>
 		</div>
 		<form method="post" action="create_account_handler.php">
-			<div class="username-input">
+			<div class="input-first">
 				username: <input type="text" name="create_username">
 			</div>
-			<div class="email-input">
+			<div class="input-second">
 				email: <input type="text" name="create_email">
 			</div>
-			<div class="password-input">
+			<div class="input-third">
 				passowrd: <input type="password" name="create_password">
 			</div>
-			<div class="submit-button">
+			<div class="input-fourth">
 				<input type="submit" value="submit">
 			</div>
 		</form>
