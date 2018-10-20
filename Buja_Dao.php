@@ -4,7 +4,7 @@ require_once 'KLogger.php';
 
 class Buja_Dao {
 
-	private $socket = '/tmp/mysql.socket'
+	private $socket = '/tmp/mysql.socket';
 	private $hostname = 'us-cdbr-iron-east-01.cleardb.net';
 	private $database = 'heroku_176bc87887e3e6a';
 	private $username = 'b3b1c0fdfa9db9';
