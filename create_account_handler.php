@@ -23,7 +23,8 @@ if (!isset($_SESSION['create_error'])) {
 }
 
 if (isset($_SESSION['create_error'])) {
-	header('Location: https://stark-beyond-19703.herokuapp.com/create_account.php');
+	echo "{$_SESSION['create_error']}";
+	/*	header('Location: https://stark-beyond-19703.herokuapp.com/create_account.php');*/
 }
 
 exit;
