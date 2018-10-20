@@ -34,7 +34,7 @@ unset($_SESSION['login_error']);
 				<input type="submit" value="login">
 			</div>
 		</form>
-		<div class="absolute-left input-fourth">
+		<div class="absolute-left login-or-create">
 			<p>-or-</p>
 			<form method="get" action="create_account.php">
 				<input type="submit" value="create account">

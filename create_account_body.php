@@ -33,7 +33,7 @@ unset($_SESSION['create_error']);
 			<div class="absolute-left input-third">
 				passowrd: <input type="password" name="create_password">
 			</div>
-			<div class="absolute-left input-fourth">
+			<div class="absolute-left create_submit">
 				<input type="submit" value="submit">
 			</div>
 		</form>
