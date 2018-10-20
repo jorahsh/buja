@@ -23,7 +23,7 @@ unset($_SESSION['login_error']);
 		</div>
 		<form method="post" action="login_handler.php">
 			<div class="username-input">
-				username: <input type="text" name="uname">
+				username: <input type="text" name="username">
 			</div>
 			<div class="password-input">
 				passowrd: <input type="password" name="password">
