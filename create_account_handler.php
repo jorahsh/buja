@@ -5,10 +5,15 @@ session_start();
 require_once 'Buja_Dao.php';
 
 $username = $_POST['create_username'];
+$email = $_POST['create_email'];
 $password = $_POST['create_password'];
 
 if (empty($username)) {
 	$_SESSION['create_error'][] = 'please enter a username';
+}
+
+if (empty($email)) {
+	$_SESSION['create_error'][] = 'please enter an email';
 }
 
 if (empty($password)) {
@@ -17,7 +22,7 @@ if (empty($password)) {
 
 if (!isset($_SESSION['create_error'])) {
 	$dao = new Buja_Dao();
-	/*$dao->setUser($username,$password);*/
+	$dao->setUser($username,$email,$password);
 	$_SESSION['logged_in'] = true;
 	header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 }

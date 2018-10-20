@@ -27,6 +27,9 @@ unset($_SESSION['create_error']);
 			<div class="username-input">
 				username: <input type="text" name="create_username">
 			</div>
+			<div class="email-input">
+				email: <input type="text" name="create_email">
+			</div>
 			<div class="password-input">
 				passowrd: <input type="password" name="create_password">
 			</div>
