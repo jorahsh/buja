@@ -36,8 +36,7 @@ class Buja_Dao {
 			$stmt->bindParam(":username", $username);
 			$stmt->bindParam(":password", $password);
 			$stmt->execute();
-			$stmt->bind_result($ret);
-			$stmt->fetch();
+			$ret = $stmt->fetch();
 			$conn = null;
 		}
 		catch (Exception $e) {
