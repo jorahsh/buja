@@ -21,7 +21,7 @@ unset($_SESSION['login_error']);
 			to use buja to your heart\'s content.
 			</p>
 		</div>
-		<form method="post" action="login_handler.php">
+		<form method="post" action="create_account_handler.php">
 			<div class="username-input">
 				username: <input type="text" name="create_username">
 			</div>
