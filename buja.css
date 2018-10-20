@@ -77,6 +77,10 @@ body {
 	top: 70%;
 }
 
+.email-field {
+	margin-left: 10px;
+}
+
 .left-arrow-circle {
 	position: fixed;
 	left: 5%;
