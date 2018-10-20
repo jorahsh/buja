@@ -1,10 +1,9 @@
 <body>
 	<div class="main-container">
 <?php
-
-if (isset($_SESSION['login_error'])) { ?>
-<?php	foreach($_SESSION['login_error'] as $message) { ?>
-		<div class="login_error"><?php echo $message; ?></div>
+if (isset($_SESSION['create_error'])) { ?>
+<?php	foreach($_SESSION['create_error'] as $message) { ?>
+		<div class="create_error"><?php echo $message; ?></div>
 <?php	}
 unset($_SESSION['login_error']);
 } ?>
