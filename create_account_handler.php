@@ -1,4 +1,29 @@
 <?php
-	header("Location: https://stark-beyond-19703.herokuapp.com/create_account.php");
-exit;
 
+session_start();
+
+require_once 'Buja_Dao.php';
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+if (empty($username)) {
+	$_SESSION['login_error'][] = 'please enter a username';
+}
+
+if (empty($password)) {
+	$_SESSION['login_error'][] = 'please enter a password';
+}
+
+if (!isset($_SESSION['login_error'])) {
+	$dao = new Buja_Dao();
+	$dao->setUser($username,$password);
+	$_SESSION['logged_in'] = true;
+	header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
+}
+
+if (isset($_SESSION['login_error'])) {
+	header('Location: https://stark-beyond-19703.herokuapp.com/create_account.php');
+}
+
+exit;

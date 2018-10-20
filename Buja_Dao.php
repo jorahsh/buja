@@ -21,7 +21,7 @@ class Buja_Dao {
 			$conn = new PDO("mysql: host={$this->hostname};dbname={$this->database}", $this->username, $this->password);
 		}
 		catch (Exception $e) {
-			echo "$e";
+			echo "inside getConnection() $e";
 			$this->log->LogFatal($e);
 		}
 		return $conn;
@@ -40,6 +40,7 @@ class Buja_Dao {
 			$conn = null;
 		}
 		catch (Exception $e) {
+			echo "inside getUser() $e";
 			$this->log->LogFatal($e);
 		}
 		return $ret;
@@ -57,6 +58,7 @@ class Buja_Dao {
 			$conn = null;
 		}
 		catch (Exception $e) {
+			echo "inside setUser() $e";
 			$this->log->LogFatal($e);
 		}
 	}

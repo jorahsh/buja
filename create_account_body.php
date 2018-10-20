@@ -1,6 +1,13 @@
-<?php
-echo '<body>
+<body>
 	<div class="main-container">
+<?php
+
+if (isset($_SESSION['login_error'])) { ?>
+<?php	foreach($_SESSION['login_error'] as $message) { ?>
+		<div class="login_error"><?php echo $message; ?></div>
+<?php	}
+unset($_SESSION['login_error']);
+} ?>
 	<div class="welcome-box">
 		<div class="welcome-box-header">
 			<span class="welcome-box-header-text">
@@ -19,7 +26,7 @@ echo '<body>
 				username: <input type="text" name="uname">
 			</div>
 			<div class="password-input">
-				passowrd: <input type="text" name="password">
+				passowrd: <input type="password" name="password">
 			</div>
 			<div class="submit-button">
 				<input type="submit" value="submit">
@@ -27,5 +34,4 @@ echo '<body>
 		</form>
 	</div>
 	</div>
-</body>';
-
+</body>
