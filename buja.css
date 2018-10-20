@@ -56,15 +56,20 @@ body {
 	overflow: hidden;
 }
 
+.email-input {
+	position: relative;
+	margin-left: 20%;
+}
+
 .username-input {
-	position: absolute;
+	position: relative;
 	top: 45%;
 	margin-left: 20%;
 }
 
 .password-input {
-	position: absolute;
-	top: 55%;
+	position: relative;
+	/*top: 55%;*/
 	margin-left: 20%;
 }
 
