@@ -24,17 +24,17 @@ unset($_SESSION['login_error']);
 			</p>
 		</div>
 		<form method="post" action="login_handler.php">
-			<div class="username-input">
+			<div class="absolute-left input-first">
 				username: <input type="text" name="username">
 			</div>
-			<div class="password-input">
+			<div class="absolute-left input-second">
 				passowrd: <input type="password" name="password">
 			</div>
-			<div class="submit-button">
+			<div class="absolute-left submit-third">
 				<input type="submit" value="login">
 			</div>
 		</form>
-		<div class="create-account">
+		<div class="absolute-left submit-fourth">
 			<p>-or-</p>
 			<form method="get" action="create_account.php">
 				<input type="submit" value="create account">

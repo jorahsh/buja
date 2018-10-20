@@ -56,34 +56,25 @@ body {
 	overflow: hidden;
 }
 
-.input-first {
+.absolute-left {
 	position: absolute;
-	top: 45%;
 	margin-left: 20%;
+}
+
+.input-first {
+	top: 45%;
 }
 
 .input-second {
-	position: relative;
 	top: 55%;
-	margin-left: 20%;
 }
 
 .input-third {
-	position: relative;
 	top: 65%;
-	margin-left: 20%;
 }
 
-.submit-button {
-	position: absolute;
+.input-fourth {
 	top: 75%;
-	margin-left: 20%;
-}
-
-.create-account {
-	position: absolute;
-	top: 80%;
-	margin-left: 20%;
 }
 
 .left-arrow-circle {
