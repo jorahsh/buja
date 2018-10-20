@@ -1,5 +1,13 @@
 <?php
-echo '<div class="main-container">
+session_start();
+
+$genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
+
+if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+  header('Location: http://cs401/comments/login.php');
+  exit;
+} ?>
+<div class="main-container">
 	<div class="left-arrow-circle">
 		<img src="./img/left-arrow-circle.png">
 	</div>
@@ -13,13 +21,12 @@ echo '<div class="main-container">
 		<img class= "grey-arrow-right" src="./img/grey-arrow-right.png">
 		<img class= "grey-arrow-left" src="./img/grey-arrow-left.png">
 		<ul class="genre-list">';
-
-$genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
+<?php
 
 foreach($genres as $genre){
 	echo "<li class='genre-tab'> $genre </li>";
 }
-
-echo	'</ul>
+?>
+		</ul>
 	</div>
-</div>';
+</div>

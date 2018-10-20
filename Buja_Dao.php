@@ -22,7 +22,6 @@ class Buja_Dao {
 			$conn = new PDO("mysql:unix_socket={$this->socket};host={$this->hostname};dbname={$this->database}", $this->username, $this->password);
 		}
 		catch (Exception $e) {
-			echo $e;
 			$this->log->LogFatal($e);
 		}
 		return $conn;
@@ -40,7 +39,6 @@ class Buja_Dao {
 			$conn = null;
 		}
 		catch (Exception $e) {
-			echo $e;
 			$this->log->LogFatal($e);
 		}
 		return $ret;
