@@ -4,8 +4,8 @@ session_start();
 
 require_once 'Buja_Dao.php';
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = $_POST['create_username'];
+$password = $_POST['create_password'];
 
 if (empty($username)) {
 	$_SESSION['login_error'][] = 'please enter a username';
