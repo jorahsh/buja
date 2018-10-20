@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <body>
 	<div class="main-container">
 <?php
