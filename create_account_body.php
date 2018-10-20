@@ -5,7 +5,7 @@ if (isset($_SESSION['create_error'])) { ?>
 <?php	foreach($_SESSION['create_error'] as $message) { ?>
 		<div class="create_error"><?php echo $message; ?></div>
 <?php	}
-unset($_SESSION['login_error']);
+unset($_SESSION['create_error']);
 } ?>
 	<div class="welcome-box">
 		<div class="welcome-box-header">
