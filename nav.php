@@ -4,9 +4,7 @@
 		<div class ="dropdown">
 			<img src="./img/menu-icon1.png">
 				  <div class="dropdown-content">
-    					<a href="#">Link 1</a>
-    					<a href="#">Link 2</a>
-    					<a href="#">Link 3</a>
+    					<a>Logout</a>
 				  </div>
 		</div>
 		<img class="user-icon" src="./img/user-icon1.png">
