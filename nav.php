@@ -4,7 +4,7 @@
 		<div class ="dropdown">
 			<img src="./img/menu-icon1.png">
 				  <div class="dropdown-content">
-    					<a>Logout</a>
+    					<a href="logout.php">Logout</a>
 				  </div>
 		</div>
 		<img class="user-icon" src="./img/user-icon1.png">
