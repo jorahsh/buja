@@ -33,7 +33,7 @@ class Movie_Dao {
 		try {
 			$stmt = $conn->prepare($sql);
 			$stmt->execute();
-			$ret = $stmt->fetch(PDO::FETCH_ASSOC);
+			$ret = $stmt->fetchAll();
 			$conn = null;
 		}
 		catch (Exception $e) {
