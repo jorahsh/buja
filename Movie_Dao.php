@@ -28,7 +28,7 @@ class Movie_Dao {
 	}
 
 	public function getAllMovies() {
-		$sql = "select * from movies";
+		$sql = "select * from movie";
 		$conn = $this->getConnection();
 		try {
 			$ret = $conn->query($sql, PDO::FETCH_ASSOC);
