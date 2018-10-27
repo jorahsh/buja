@@ -122,7 +122,7 @@ body {
 
 .movie-poster {
 	position: fixed;
-	left: 30%;
+	left: 35%;
 	top: 15%;
 }
 
@@ -132,7 +132,7 @@ body {
 	max-height: 60px;
 	background-color: black;
 	position: absolute;
-	top: 80%;
+	top: 85%;
 }
 
 .grey-arrow-left {
