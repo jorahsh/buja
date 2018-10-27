@@ -16,9 +16,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 		<input type="image" src="./img/left-arrow-circle.png">
 	</div>
 	<div class="movie-poster">
-<?php
-		<input type="image" src="{$movies[0]['poster']}">
-?>	
+	<input type="image" src=<?php echo "'{$movies[0]['poster']}'"?>>	
 	</div>
 	<div class="right-arrow-circle">
 		<input type="image" src="./img/right-arrow-circle.png">
