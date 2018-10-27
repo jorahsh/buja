@@ -16,7 +16,9 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 		<input type="image" src="./img/left-arrow-circle.png">
 	</div>
 	<div class="movie-poster">
-		<input type="image" src="./img/star-wars-poster.jpg">
+<?php
+		<input type="image" src="{$movies[0]['poster']}">
+?>	
 	</div>
 	<div class="right-arrow-circle">
 		<input type="image" src="./img/right-arrow-circle.png">
@@ -33,22 +35,3 @@ foreach($genres as $genre){
 		</ul>
 	</div>
 </div>
-	<div>
-		<table>
-<?php
-print_r($movies);
-foreach($movies as $movie) {
-	echo "<tr>
-		<td>" . htmlentities($movie['title']) . "</td>
-		<td>" . htmlentities($movie['rating']) . "</td>
-		<td>" . htmlentities($movie['year']) . "</td>
-		<td>" . htmlentities($movie['runtime']) . "</td>
-		<td>" . htmlentities($movie['language']) . "</td>
-		<td><img src='{$movie['poster']}'/></td>
-		<td>" . htmlentities($movie['genre']) . "</td>
-		<td>" . htmlentities($movie['rating']) . "</td>
-	</tr>";
-    }
-?>
-		</table>
-	</div>
