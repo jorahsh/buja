@@ -127,7 +127,7 @@ body {
 }
 
 .title > p {
-	height: 20px;
+	margin: 0px;
 }
 
 .movie-poster {
