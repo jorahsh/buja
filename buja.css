@@ -77,6 +77,8 @@ body {
 .main-container {
 	height: 80%;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
 }
 
 .absolute-left {
