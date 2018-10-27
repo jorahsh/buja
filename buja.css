@@ -124,7 +124,6 @@ body {
 
 .title {
 	display: block;
-	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	top: 10%;
@@ -132,9 +131,6 @@ body {
 }
 
 .movie-poster {
-	display: flex;
-	position: absolute;
-	align-items: center;
 	top: 13%;
 }
 
