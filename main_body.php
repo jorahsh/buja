@@ -34,17 +34,18 @@ foreach($genres as $genre){
 	</div>
 	<div>
 <?php
-    foreach ($movies as $movie) {
-	    echo "<tr>
-		    <td>" . htmlentities($movie['title']) . "</td>
-		    <td>" . htmlentities($movie['rating']) . "</td>
-		    <td>" . htmlentities($movie['year']) . "</td>
-		    <td>" . htmlentities($movie['runtime']) . "</td>
-		    <td>" . htmlentities($movie['language']) . "</td>
-		    <td><img src='{$movie['poster']}'/></td>
-		    <td>" . htmlentities($movie['genre']) . "</td>
-		    <td>" . htmlentities($movie['rating']) . "</td>
-		</tr>";
+print_r($movies);
+foreach ($movies as $movie) {
+	echo "<tr>
+		<td>" . htmlentities($movie['title']) . "</td>
+		<td>" . htmlentities($movie['rating']) . "</td>
+		<td>" . htmlentities($movie['year']) . "</td>
+		<td>" . htmlentities($movie['runtime']) . "</td>
+		<td>" . htmlentities($movie['language']) . "</td>
+		<td><img src='{$movie['poster']}'/></td>
+		<td>" . htmlentities($movie['genre']) . "</td>
+		<td>" . htmlentities($movie['rating']) . "</td>
+	</tr>";
     }
 ?>
 	</div>
