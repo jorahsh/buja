@@ -33,9 +33,10 @@ foreach($genres as $genre){
 		</ul>
 	</div>
 	<div>
+		<table>
 <?php
 print_r($movies);
-foreach ($movies as $movie) {
+foreach($movies as $movie) {
 	echo "<tr>
 		<td>" . htmlentities($movie['title']) . "</td>
 		<td>" . htmlentities($movie['rating']) . "</td>
@@ -48,5 +49,6 @@ foreach ($movies as $movie) {
 	</tr>";
     }
 ?>
+		</table>
 	</div>
 </div>
