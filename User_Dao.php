@@ -2,7 +2,7 @@
 
 require_once 'KLogger.php';
 
-class Buja_Dao {
+class User_Dao {
 
 	private $socket = '/tmp/mysql.socket';
 	private $hostname = 'us-cdbr-iron-east-01.cleardb.net';

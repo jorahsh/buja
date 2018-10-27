@@ -2,6 +2,8 @@
 
 session_start();
 
+require_once 'User_Dao.php';
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -14,8 +16,7 @@ if (empty($password)) {
 }
 
 if (!isset($_SESSION['login_error'])) {
-	require_once 'Buja_Dao.php';
-	$dao = new Buja_Dao();
+	$dao = new User_Dao();
 	$user = $dao->getUser($username,$password);
 	echo $user;
 	if ($user != null){
