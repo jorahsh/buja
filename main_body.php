@@ -6,6 +6,7 @@ require_once'Movie_Dao.php';
 $dao = new Movie_Dao();
 $movies = $dao->getAllMovies();
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
+$rand = rand(0, (count($movies) - 1));
 
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
@@ -16,7 +17,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 		<input type="image" src="./img/left-arrow-circle.png">
 	</div>
 	<div class="movie-poster">
-		<input type="image" src=<?php echo '"'. $movies[0]['poster'] . '"';?>>
+		<input type="image" src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>>
 	</div>
 	<div class="right-arrow-circle">
 		<input type="image" src="./img/right-arrow-circle.png">
