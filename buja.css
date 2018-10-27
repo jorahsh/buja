@@ -124,6 +124,9 @@ body {
 	text-align: center;
 	font-family: 'Bevan', cursive;
 	font-size: 24px;
+}
+
+.title > p {
 	height: 20px;
 }
 
