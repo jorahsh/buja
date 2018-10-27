@@ -123,16 +123,10 @@ body {
 }
 
 .title {
-	position: absolute;
-	top: 10%;
-	margin-left: auto;
-	margin-right: auto;
 	text-align: center;
 }
 
-.movie-poster {
-	display: block;
-	top: 13%;
+.center {
 	margin-left: auto;
 	margin-right: auto;
 }
