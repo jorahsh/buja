@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+require_once'Movie_Dao.php';
+
+$dao = new Movie_Dao();
+$movies = $dao->getAllMovies();
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
