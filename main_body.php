@@ -44,7 +44,7 @@ foreach($movies as $movie) {
 		<td>" . htmlentities($movie['year']) . "</td>
 		<td>" . htmlentities($movie['runtime']) . "</td>
 		<td>" . htmlentities($movie['language']) . "</td>
-		<td><img class='movie-poster' src='{$movie['poster']}'/></td>
+		<td><img src='{$movie['poster']}'/></td>
 		<td>" . htmlentities($movie['genre']) . "</td>
 		<td>" . htmlentities($movie['rating']) . "</td>
 	</tr>";
