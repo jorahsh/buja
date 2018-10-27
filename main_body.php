@@ -30,6 +30,9 @@ foreach($genres as $genre){
 	echo "<li class='genre-tab'> $genre </li>";
 }
 ?>
+		</ul>
+	</div>
+	<div>
 <?php
     foreach ($movies as $movie) {
 	    echo "<tr>
@@ -40,10 +43,9 @@ foreach($genres as $genre){
 		    <td>" . htmlentities($movie['language']) . "</td>
 		    <td><img src='{$movie['poster']}'/></td>
 		    <td>" . htmlentities($movie['genre']) . "</td>
-		    <td>" . htmlentities($movie['description']) . "</td>
-		  </tr>";
+		    <td>" . htmlentities($movie['rating']) . "</td>
+		</tr>";
     }
 ?>
-		</ul>
 	</div>
 </div>
