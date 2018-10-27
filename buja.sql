@@ -12,9 +12,9 @@ CREATE TABLE movie (
 	rating VARCHAR(8) NOT NULL,
 	year INT NOT NULL,
 	runtime VARCHAR(32) NOT NULL,
-	language VARCHAR(32),
+	language VARCHAR(64),
 	poster VARCHAR(128),
-	score DECIMAL(2,2) NOT NULL,
+	genre VARCHAR(64) NOT NULL,
 	description VARCHAR(191) NOT NULL
 );
 	
@@ -23,3 +23,4 @@ CREATE TABLE user_movie (
 	user_id INT NOT NULL,
 	movie_id INT NOT NULL
 );
+

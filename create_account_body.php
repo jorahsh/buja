@@ -19,8 +19,8 @@ unset($_SESSION['create_error']);
 		<div class="welcome-box-title">
 			<h3>Signup is both easy AND painless!</h3>
 			<p>
-			We just need a few basic facts, then you\'ll be free 
-			to use buja to your heart\'s content.
+			We just need a few basic facts, then you'll be free 
+			to use buja to your heart's content.
 			</p>
 		</div>
 		<form method="post" action="create_account_handler.php">
@@ -33,7 +33,7 @@ unset($_SESSION['create_error']);
 			<div class="absolute-left input-third">
 				passowrd: <input type="password" name="create_password">
 			</div>
-			<div class="absolute-left createsubmit">
+			<div class="absolute-left create-submit">
 				<input type="submit" value="submit">
 			</div>
 		</form>
