@@ -19,7 +19,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	<div class="title">
 		<p><?php echo htmlentities($movies[$rand]['title']); ?></p>
 	</div>
-	<div>
+	<div class="movie-poster">
 		<input class="center" type="image" src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>>
 	</div>
 	<div class="right-arrow-circle">

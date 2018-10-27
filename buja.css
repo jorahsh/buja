@@ -124,6 +124,10 @@ body {
 	text-align: center;
 }
 
+.movie-poster {
+	height: 350px;
+}
+
 .center {
 	display: block;
 	margin-left: auto;
