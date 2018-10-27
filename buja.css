@@ -123,6 +123,7 @@ body {
 .title {
 	text-align: center;
 	font-family: 'Bevan', cursive;
+	font-size: 14px;
 }
 
 .movie-poster {
