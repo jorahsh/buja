@@ -32,6 +32,7 @@ foreach($genres as $genre){
 ?>
 		</ul>
 	</div>
+</div>
 	<div>
 		<table>
 <?php
@@ -51,4 +52,3 @@ foreach($movies as $movie) {
 ?>
 		</table>
 	</div>
-</div>
