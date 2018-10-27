@@ -31,7 +31,9 @@ class Movie_Dao {
 		$sql = "select * from movie";
 		$conn = $this->getConnection();
 		try {
-			$ret = $conn->query($sql, PDO::FETCH_ASSOC);
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+			$ret = $stmt->fetch(PDO:FETCH_ASSOC);
 			$conn = null;
 		}
 		catch (Exception $e) {
