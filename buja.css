@@ -137,8 +137,20 @@ body {
 	height: 350px;
 }
 
+.seen-movie {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: center;
+	display: hidden;
+}
+
 .poster-container:hover {
 	opacity: 0.8;
+}
+
+.poster-container:hover > .seen-movie {
+	display: block;
 }
 
 .genre-bar {
