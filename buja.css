@@ -137,6 +137,10 @@ body {
 	height: 350px;
 }
 
+.movie-poster img:hover {
+	background-color: #DDD;
+}
+
 .genre-bar {
 	width: 100%;
 	height: 10%;
