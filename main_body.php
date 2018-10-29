@@ -22,10 +22,11 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	<div>
 		<div class="poster-container">
 			<div class="movie-poster" 
-				type="image" 
-				src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>
-				value=<?php echo '"' . $rand . '"';?>>
-				<img class="seen-movie" src="./img/eyeball.png">
+				style=<?php echo '"background-image: url('. $movies[$rand]['poster'] . ');"';?>
+				<input class="seen-movie"
+					type="image"
+					src="./img/eyeball.png"
+					value=<?php echo '"' . $rand . '"';?>>
 			</div>
 		</div>
 	</div>
