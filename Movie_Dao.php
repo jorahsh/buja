@@ -43,7 +43,7 @@ class Movie_Dao {
 	}
 
 	public function getMoviesUserHasNotSeen($user) {
-		$sql = "select * from movie m join user_movie um on m.id = um.movie_id where um.user_id <> :user";
+		$sql = "select * from movie m left join user_movie um on m.id = um.movie_id where um.user_id <> :user";
 		$conn = $this->getConnection();
 		try {
 			$stmt = $conn->prepare($sql);
