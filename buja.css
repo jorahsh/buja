@@ -137,7 +137,7 @@ body {
 	height: 350px;
 }
 
-.movie-poster img:hover {
+.movie-poster input:hover {
 	background-color: #DDD;
 }
 
