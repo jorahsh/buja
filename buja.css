@@ -131,7 +131,7 @@ body {
 }
 
 .movie-poster {
-	display: block;
+	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
 	height: 350px;
@@ -147,7 +147,6 @@ body {
 
 .poster-container:hover {
 	opacity: 0.8;
-	display: inline-block;
 }
 
 .poster-container:hover > .seen-movie {
