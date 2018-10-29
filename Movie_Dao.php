@@ -49,7 +49,7 @@ class Movie_Dao {
 			$stmt = $conn->prepare($sql);
 			$stmt->bindParam(":user", $user);
 			$stmt->execute();
-			$ret = $stmt->fetAll();
+			$ret = $stmt->fetchAll();
 			$conn = null;
 		}
 		catch (Exception $e) {
@@ -66,12 +66,10 @@ class Movie_Dao {
 			$stmt->bindParam(":user", $user);
 			$stmt->bindParam(":movie", $user);
 			$stmt->execute();
-			$ret = $stmt->fetAll();
 			$conn = null;
 		}
 		catch (Exception $e) {
 			$this->log->logFatal($e);
 		}
-		return $ret;
 	}	
 }
