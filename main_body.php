@@ -3,16 +3,21 @@ session_start();
 
 require_once'Movie_Dao.php';
 
-
-$dao = new Movie_Dao();
-$movies = $dao->getMoviesUserHasNotSeen();
-$genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
-$rand = rand(0, (count($movies) - 1));
-
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
   	exit;
-} ?>
+}
+if (!isset($_SESSION['user'])) {
+	header('Location: https://stark-beyond-19703.herokuapp.com');
+  	exit;
+}
+
+$dao = new Movie_Dao();
+$user = $_SESSION['user']
+$movies = $dao->getMoviesUserHasNotSeen($user);
+$genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
+$rand = rand(0, (count($movies) - 1));
+?>
 
 <div class="main-container">
 	<div class="left-arrow-circle">
