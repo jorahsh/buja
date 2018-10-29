@@ -158,6 +158,11 @@ body {
 	display: block;
 }
 
+.centered-buttons {
+	display: flex;
+	align-content: center;
+}
+
 .genre-bar {
 	width: 100%;
 	height: 10%;
