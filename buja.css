@@ -154,7 +154,7 @@ body {
 }
 
 
-.poster-container:hover > .seen-movie {
+.poster-container:hover > form > .seen-movie {
 	display: block;
 }
 
