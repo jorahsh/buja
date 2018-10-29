@@ -137,8 +137,9 @@ body {
 	height: 350px;
 }
 
-.movie-poster input:hover {
+.movie-poster:hover {
 	opacity: 0.8;
+	background-color: #DDD;
 }
 
 .genre-bar {
