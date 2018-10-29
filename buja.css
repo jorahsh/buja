@@ -145,11 +145,11 @@ body {
 	display: none;
 }
 
-.poster-container input:hover {
+.poster-container:hover {
 	opacity: 0.8;
 }
 
-.poster-container input:hover > .seen-movie {
+.poster-container:hover > .seen-movie {
 	display: block;
 }
 

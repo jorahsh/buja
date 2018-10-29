@@ -21,11 +21,12 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	</div>
 	<div>
 		<div class="poster-container">
-			<input class="movie-poster" 
+			<div class="movie-poster" 
 				type="image" 
 				src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>
 				value=<?php echo '"' . $rand . '"';?>>
-			<img class="seen-movie" src="./img/eyeball.png">
+				<img class="seen-movie" src="./img/eyeball.png">
+			</div>
 		</div>
 	</div>
 	<div class="right-arrow-circle">
