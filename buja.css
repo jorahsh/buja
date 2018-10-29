@@ -147,6 +147,7 @@ body {
 
 .poster-container:hover {
 	opacity: 0.8;
+	width: 300px;
 }
 
 .poster-container:hover > .seen-movie {
