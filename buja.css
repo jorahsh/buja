@@ -120,13 +120,13 @@ body {
 	top: 40%;
 }
 
-.title {
+.center-text {
 	text-align: center;
 	font-family: 'Bevan', cursive;
 	font-size: 24px;
 }
 
-.title > p {
+.center-text > p {
 	margin: 0px;
 }
 
@@ -153,14 +153,8 @@ body {
 	opacity: 0.8;
 }
 
-
 .poster-container:hover > form > .seen-movie {
 	display: block;
-}
-
-.centered-buttons {
-	display: flex;
-	align-content: center;
 }
 
 .genre-bar {

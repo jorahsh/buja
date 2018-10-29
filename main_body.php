@@ -23,7 +23,7 @@ $rand = rand(0, (count($movies) - 1));
 	<div class="left-arrow-circle">
 		<input type="image" src="./img/left-arrow-circle.png">
 	</div>
-	<div class="title">
+	<div class="center-text">
 		<p><?php echo htmlentities($movies[$rand]['title']); ?></p>
 	</div>
 	<div>
@@ -41,7 +41,7 @@ $rand = rand(0, (count($movies) - 1));
 	<div class="right-arrow-circle">
 		<input type="image" src="./img/right-arrow-circle.png">
 	</div>
-	<div class="title">
+	<div class="center-text">
 		<form method="post" action="main_handler.php">
 			<input type="submit" value="description">
 			<input type="submit" value="comments">
