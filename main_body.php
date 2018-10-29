@@ -25,7 +25,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 				type="image" 
 				src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>
 				value=<?php echo '"' . $rand . '"';?>>
-			<img class="seen-movie" src="./img/eyeball.png">
+			<input type="image" value="submit" class="seen-movie" src="./img/eyeball.png">
 		</div>
 	</div>
 	<div class="right-arrow-circle">
