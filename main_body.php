@@ -41,7 +41,7 @@ $rand = rand(0, (count($movies) - 1));
 	<div class="right-arrow-circle">
 		<input type="image" src="./img/right-arrow-circle.png">
 	</div>
-	<div class="centered-buttons">
+	<div class="title">
 		<form method="post" action="main_handler.php">
 			<input type="submit" value="description">
 			<input type="submit" value="comments">
