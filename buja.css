@@ -135,6 +135,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	height: 350px;
+	cursor: context-menu;
 }
 
 .seen-movie {
@@ -150,8 +151,8 @@ body {
 
 .poster-container:hover {
 	opacity: 0.8;
-	cursor: context-menu;
 }
+
 
 .poster-container:hover > .seen-movie {
 	display: block;
