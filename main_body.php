@@ -13,7 +13,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 $dao = new Movie_Dao();
-$user = $_SESSION['user']
+$user = $_SESSION['user'];
 $movies = $dao->getMoviesUserHasNotSeen($user);
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 $rand = rand(0, (count($movies) - 1));
