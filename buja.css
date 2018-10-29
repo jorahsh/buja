@@ -137,7 +137,7 @@ body {
 	height: 350px;
 }
 
-.movie-poster:hover {
+.poster-container:hover {
 	opacity: 0.8;
 }
 
