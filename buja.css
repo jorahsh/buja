@@ -149,7 +149,7 @@ body {
 	opacity: 0.8;
 }
 
-.poster-containe:hover > .seen-movie {
+.poster-container:hover > .seen-movie {
 	display: block;
 }
 
