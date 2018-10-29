@@ -44,7 +44,7 @@ class User_Dao {
 		return $ret;
 	}
 
-	public function setUser($username, $email, $password) {
+	public function addUser($username, $email, $password) {
 		$sql = "insert into user (username, email, password, access) values(:username, :email, :password, 1)";
 		$conn = $this->getConnection();
 		$stmt = $conn->prepare($sql);

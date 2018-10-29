@@ -42,4 +42,36 @@ class Movie_Dao {
 		return $ret;
 	}
 
+	public function getMoviesUserHasNotSeen($user) {
+		$sql = "select * from movie m join user_movie um on m.id = um.movie_id where um.user_id != :user";
+		$conn = $this->getConnection();
+		try {
+			$stmt = $conn->prepare($sql);
+			$stmt->bindParam(":user", $user);
+			$stmt->execute();
+			$ret = $stmt->fetAll();
+			$conn = null;
+		}
+		catch (Exception $e) {
+			$this->log->logFatal($e);
+		}
+		return $ret;
+	}
+
+	public function addSeenMovie($user,$movie) {
+		$sql = "insert into user_move (user_id, movie_id) values (:user, :movie)";
+		$conn = $this->getConnection();
+		try {
+			$stmt = $conn->prepare($sql);
+			$stmt->bindParam(":user", $user);
+			$stmt->bindParam(":movie", $user);
+			$stmt->execute();
+			$ret = $stmt->fetAll();
+			$conn = null;
+		}
+		catch (Exception $e) {
+			$this->log->logFatal($e);
+		}
+		return $ret;
+	}	
 }

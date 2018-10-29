@@ -21,6 +21,7 @@ if (!isset($_SESSION['login_error'])) {
 	echo $user;
 	if ($user != null){
 		$_SESSION['logged_in'] = true;
+		$_SESSION['user'] = $user['id'];
 		header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 	}
 	else {

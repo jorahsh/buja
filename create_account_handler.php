@@ -22,7 +22,7 @@ if (empty($password)) {
 
 if (!isset($_SESSION['create_error'])) {
 	$dao = new User_Dao();
-	$dao->setUser($username,$email,$password);
+	$dao->addUser($username,$email,$password);
 	$_SESSION['logged_in'] = true;
 	header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 }

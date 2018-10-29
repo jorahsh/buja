@@ -3,8 +3,9 @@ session_start();
 
 require_once'Movie_Dao.php';
 
+
 $dao = new Movie_Dao();
-$movies = $dao->getAllMovies();
+$movies = $dao->getMoviesUserHasNotSeen();
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 $rand = rand(0, (count($movies) - 1));
 
@@ -12,6 +13,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
   	exit;
 } ?>
+
 <div class="main-container">
 	<div class="left-arrow-circle">
 		<input type="image" src="./img/left-arrow-circle.png">
@@ -21,11 +23,14 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	</div>
 	<div>
 		<div class="poster-container movie-poster">
-			<input class="movie-poster" 
-				type="image" 
-				src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>
-				value=<?php echo '"' . $rand . '"';?>>
-			<input type="image" value="submit" class="seen-movie" src="./img/eyeball.png">
+			<form method="post" action="main_handler.php">
+				<input class="movie-poster" 
+					type="image" 
+					src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>
+					name="seen"
+					value=<?php echo '"' . $rand . '"';?>>
+				<input type="image" value="submit" class="seen-movie" src="./img/eyeball.png">
+			</form>
 		</div>
 	</div>
 	<div class="right-arrow-circle">
