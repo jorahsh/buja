@@ -43,8 +43,8 @@ $rand = rand(0, (count($movies) - 1));
 	</div>
 	<div class="center-text">
 		<form method="post" action="main_handler.php">
-			<input type="submit" value="description">
-			<input type="submit" value="comments">
+			<input type="submit" name="view" value="description">
+			<input type="submit" name="view" value="comments">
 		</form>
 	</div>
 	<div class="genre-bar">
