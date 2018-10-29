@@ -139,7 +139,7 @@ body {
 
 .seen-movie {
 	position: absolute;
-	left: 50%;
+	left: calc(50% - (60px));
 	top: calc(50% - (60px));;
 	display: none;
 }
