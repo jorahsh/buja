@@ -51,12 +51,13 @@ $rand = rand(0, (count($movies) - 1));
 if(isset($_SESSION['view'])) {
 	if($_SESSION['view'] === 'description') { ?>
 		<div><p><?php echo $movies[$rand]['description']; ?></p></div>
-<?php	}	
+<?php	}
+}
 ?>	
 	<div class="genre-bar">
 		<input type="image" class= "grey-arrow-right" src="./img/grey-arrow-right.png">
 		<input type="image" class= "grey-arrow-left" src="./img/grey-arrow-left.png">
-		<ul class="genre-list">';
+		<ul class="genre-list">
 <?php
 foreach($genres as $genre){
 	echo "<li class='genre-tab'> $genre </li>";
