@@ -51,9 +51,7 @@ $rand = rand(0, (count($movies) - 1));
 if(isset($_SESSION['view'])) {
 	if($_SESSION['view'] === 'description') { ?>
 		<div>
-			<div class="center">
-				<p class="center-text half-width"><?php echo htmlentities($movies[$rand]['description']); ?></p>
-			</div>
+			<p class="center-text half-width"><?php echo htmlentities($movies[$rand]['description']); ?></p>
 		</div>
 <?php	}
 }
