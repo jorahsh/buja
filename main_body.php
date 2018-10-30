@@ -19,7 +19,7 @@ $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 $rand = rand(0, (count($movies) - 1));
 ?>
 
-<div class="main-container">
+<div>
 	<div class="left-arrow-circle">
 		<input type="image" src="./img/left-arrow-circle.png">
 	</div>
