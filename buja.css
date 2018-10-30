@@ -121,6 +121,9 @@ body {
 .center-text {
 	text-align: center;
 	font-family: 'Bevan', cursive;
+}
+
+.large-text {
 	font-size: 24px;
 }
 
