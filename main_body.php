@@ -27,9 +27,9 @@ $rand = rand(0, (count($movies) - 1));
 		<p><?php echo htmlentities($movies[$rand]['title']); ?></p>
 	</div>
 	<div>
-		<div class="poster-container center movie-poster">
+		<div class="poster-container center">
 			<form method="post" action="main_handler.php">
-				<input class="center" 
+				<input class="center movie-poster" 
 					type="image" 
 					src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>
 					name="seen"
