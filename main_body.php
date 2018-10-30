@@ -47,6 +47,12 @@ $rand = rand(0, (count($movies) - 1));
 			<input type="submit" name="view" value="comments">
 		</form>
 	</div>
+<?php
+if(isset($_SESSION['view'])) {
+	if($_SESSION['view'] === 'description') { ?>
+		<div><p><?php echo $movies[$rand]['description']; ?></p></div>
+<?php	}	
+?>	
 	<div class="genre-bar">
 		<input type="image" class= "grey-arrow-right" src="./img/grey-arrow-right.png">
 		<input type="image" class= "grey-arrow-left" src="./img/grey-arrow-left.png">
