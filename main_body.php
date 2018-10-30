@@ -27,7 +27,7 @@ $rand = rand(0, (count($movies) - 1));
 		<p><?php echo htmlentities($movies[$rand]['title']); ?></p>
 	</div>
 	<div>
-		<div class="poster-container movie-poster">
+		<div class="poster-container center movie-poster">
 			<form method="post" action="main_handler.php">
 				<input class="center" 
 					type="image" 
@@ -50,8 +50,10 @@ $rand = rand(0, (count($movies) - 1));
 <?php
 if(isset($_SESSION['view'])) {
 	if($_SESSION['view'] === 'description') { ?>
-		<div class="center-text">
-			<p class="center half-width"><?php echo htmlentities($movies[$rand]['description']); ?></p>
+		<div>
+			<div class="center">
+				<p class="center-text half-width"><?php echo htmlentities($movies[$rand]['description']); ?></p>
+			</div>
 		</div>
 <?php	}
 }
