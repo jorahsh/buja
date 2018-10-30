@@ -120,6 +120,12 @@ body {
 	top: 40%;
 }
 
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .center-text {
 	text-align: center;
 	font-family: 'Bevan', cursive;
@@ -134,9 +140,6 @@ body {
 }
 
 .movie-poster {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	height: 350px;
 	cursor: context-menu;
 }
@@ -175,6 +178,10 @@ body {
 .grey-arrow-right {
 	float: right;
 	margin: 4px;
+}
+
+.half-width {
+	width: 50%;
 }
 
 .genre-list {
