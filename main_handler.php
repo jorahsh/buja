@@ -11,6 +11,9 @@ $user = $_SESSION['user'];
 if (!empty($seen)) {
 	$dao = new Movie_Dao();
 	$dao->addSeenMovie($user,$seen);
+	if(isset($_SESSION['movie_id'])) {
+		unset($_SESSION['movie_id']);
+	}
 }
 
 if(!empty($view)) {
@@ -20,10 +23,6 @@ if(!empty($view)) {
 	else {
 		$_SESSION['view'] = $view;
 	}
-}
-
-if(isset($_SESSION['movie_id'])) {
-	unset($_SESSION['movie_id']);
 }
 
 header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
