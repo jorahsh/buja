@@ -37,9 +37,16 @@ elseif (strlen($password) < 5) {
 
 if (!isset($_SESSION['create_error'])) {
 	$dao = new User_Dao();
-	$dao->addUser($username,$email,$password);
-	$_SESSION['logged_in'] = true;
-	header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
+	$ret = $dao->addUser($username,$email,$password);
+	if($ret === 1) {
+		$_SESSION['logged_in'] = true;
+		$user = $dao->getUser($username,$password);
+		$_SESSION['user'] = $user['id'];
+		header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
+	}
+	else {
+		$_SESSION['create_error'][] = 'username is already taken';
+	}
 }
 
 if (isset($_SESSION['create_error'])) {

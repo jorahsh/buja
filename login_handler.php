@@ -21,7 +21,6 @@ if (empty($password)) {
 if (!isset($_SESSION['login_error'])) {
 	$dao = new User_Dao();
 	$user = $dao->getUser($username,$password);
-	echo $user;
 	if ($user != null){
 		$_SESSION['logged_in'] = true;
 		$_SESSION['user'] = $user['id'];
