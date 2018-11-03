@@ -22,7 +22,7 @@ body {
 	position: absolute;
 	display: inline-flex;
 	top: 15px;
-	left: 10%;
+	left: calc(12%+(60px));
 }
 
 .user-icon {
