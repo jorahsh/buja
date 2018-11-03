@@ -12,7 +12,7 @@ if (empty($username)) {
 	$_SESSION['create_error'][] = 'please enter a username';
 }
 elseif (strlen($username) < 3) {
-	$_SESSSION['create_error'][] = 'username must be at least 3 characters';
+	$_SESSION['create_error'][] = 'username must be at least 3 characters';
 }
 
 if (empty($email)) {
