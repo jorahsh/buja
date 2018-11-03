@@ -31,7 +31,7 @@ else {
 		<input type="image" src="./img/left-arrow-circle.png">
 	</div>
 	<div class="center-text large-text">
-		<p><?php echo htmlentities($movies[$rand]['title']); ?></p>
+		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
 	<div>
 		<div class="poster-container center">
