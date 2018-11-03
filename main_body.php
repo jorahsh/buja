@@ -22,6 +22,7 @@ if(isset($_SESSION['movie_id'])) {
 }
 else {
 	$pos = rand(0, (count($movies) - 1));
+	$_SESSION['movie_id'] = $pos;
 }
 ?>
 
