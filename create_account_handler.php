@@ -22,7 +22,7 @@ if (empty($email)) {
 	$_SESSION['create_error'][] = 'please enter an email';
 }
 else {
-	if (!preg_match('^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$', $email)) {
+	if (!preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $email)) {
 		$_SESSION['create_error'][] = 'please enter a valid email';
 	}
 	$_SESSION['create_email'] = $email;
