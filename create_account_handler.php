@@ -45,7 +45,7 @@ if (!isset($_SESSION['create_error'])) {
 		header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 	}
 	else {
-		$_SESSION['create_error'][] = 'username is already taken';
+		$_SESSION['create_error'][] = 'username or email is already taken';
 	}
 }
 
