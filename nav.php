@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <div class="nav-bar">
 	<div class="vertical-center">
 		<img class="nav-logo" src="./img/logo-small.png">
