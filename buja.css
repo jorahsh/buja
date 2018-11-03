@@ -20,6 +20,8 @@ body {
 
 .username {
 	display: inline-flex;
+	vertical-align: center;
+	left 10%;
 }
 
 .user-icon {
