@@ -4,7 +4,7 @@
 <?php
 if (isset($_SESSION['logged_in'])) { ?>
 	<div class="username">
-		<?php echo "Hello {$_SESSION['username']}!"; ?>
+		<?php echo "Hello " . htmlentities($_SESSION['username']) . "!"; ?>
 	</div>
 <?php
 }
