@@ -53,11 +53,10 @@ class User_Dao {
 			$stmt->bindParam(":email", $email);
 			$stmt->bindParam(":password", $password);
 			$stmt->execute();
-			$ret = stmt->rowCount();
+			$ret = $stmt->rowCount();
 			$conn = null;
 		}
 		catch (Exception $e) {
-			echo $e;
 			$this->log->LogFatal($e);
 		}
 		return $ret;
