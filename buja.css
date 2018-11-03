@@ -19,9 +19,10 @@ body {
 }
 
 .username {
+	position: absolute;
 	display: inline-flex;
-	position: sticky;
 	top: 15px;
+	left: 12%;
 }
 
 .user-icon {
