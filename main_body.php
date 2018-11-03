@@ -16,7 +16,13 @@ $dao = new Movie_Dao();
 $user = $_SESSION['user'];
 $movies = $dao->getMoviesUserHasNotSeen($user);
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
-$rand = rand(0, (count($movies) - 1));
+
+if(isset($_SESSION['movie_id'])) {
+	$pos = $_SESSION['movie_id'];
+}
+else {
+	$pos = rand(0, (count($movies) - 1));
+}
 ?>
 
 <div>
@@ -31,9 +37,9 @@ $rand = rand(0, (count($movies) - 1));
 			<form method="post" action="main_handler.php">
 				<input class="center movie-poster" 
 					type="image" 
-					src=<?php echo '"'. $movies[$rand]['poster'] . '"';?>
+					src=<?php echo '"'. $movies[$pos]['poster'] . '"';?>
 					name="seen"
-					value=<?php echo '"' . $rand . '"';?>>
+					value=<?php echo '"' . $pos . '"';?>>
 				<input type="image" value="submit" class="seen-movie" src="./img/eyeball.png">
 			</form>
 		</div>
@@ -52,9 +58,12 @@ if(isset($_SESSION['view'])) {
 	if($_SESSION['view'] === 'description') { ?>
 		<div class="center">
 			<p class="center-text center description-width">
-				<?php echo htmlentities($movies[$rand]['description']); ?>
+				<?php echo htmlentities($movies[$pos]['description']); ?>
 			</p>
 		</div>
+<?php	}
+	if($_SESSION['view'] === 'comments') { ?>
+
 <?php	}
 }
 ?>	

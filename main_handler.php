@@ -22,6 +22,10 @@ if(!empty($view)) {
 	}
 }
 
+if(isset($_SESSION['movie_id'])) {
+	unset($_SESSION['movie_id']);
+}
+
 header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 
 exit;
