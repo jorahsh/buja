@@ -19,10 +19,9 @@ body {
 }
 
 .username {
-	position: absolute;
 	display: inline-flex;
+	position: sticky;
 	top: 15px;
-	margin-left: calc(12%+(60px));
 }
 
 .user-icon {
