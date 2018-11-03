@@ -6,7 +6,7 @@ session_start();
 		<img class="nav-logo" src="./img/logo-small.png">
 <?php
 if (isset($_SESSION['logged_in'])) { ?>
-	<div class="username">
+	<div class="username center-text">
 		<?php echo "Hello " . htmlentities($_SESSION['username']) . "!"; ?>
 	</div>
 <?php
