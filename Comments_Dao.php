@@ -2,7 +2,7 @@
 
 require_once 'KLogger.php';
 
-class Movie_Dao {
+class Comments_Dao {
 
 	private $socket = '/tmp/mysql.socket';
 	private $hostname = 'us-cdbr-iron-east-01.cleardb.net';
@@ -13,7 +13,7 @@ class Movie_Dao {
 
 	public function __construct() {
 		$this->log = new KLogger("db_log.txt", KLogger::INFO);
-		$this->log->LogInfo("successfully created Movie_Dao!");
+		$this->log->LogInfo("successfully created Comments_Dao!");
 	}
 
 
@@ -27,8 +27,8 @@ class Movie_Dao {
 		return $conn;
 	}
 
-	public function getAllMovies() {
-		$sql = "select * from movie";
+	public function getAllComments() {
+		$sql = "select * from comments";
 		$conn = $this->getConnection();
 		try {
 			$stmt = $conn->prepare($sql);
@@ -42,12 +42,12 @@ class Movie_Dao {
 		return $ret;
 	}
 
-	public function getMoviesUserHasNotSeen($user) {
-		$sql = "select * from movie m where m.id not in (select movie_id from user_movie um where um.user_id = :user)";
+	public function getMovieComments($movie) {
+		$sql = "select username, comment, date from comments c join user u on u.id = c.user_id where c.movie_id = :movie";
 		$conn = $this->getConnection();
 		try {
 			$stmt = $conn->prepare($sql);
-			$stmt->bindParam(":user", $user);
+			$stmt->bindParam(":movie", $movie);
 			$stmt->execute();
 			$ret = $stmt->fetchAll();
 			$conn = null;
@@ -58,13 +58,14 @@ class Movie_Dao {
 		return $ret;
 	}
 
-	public function addSeenMovie($user,$movie) {
-		$sql = "insert into user_move (user_id, movie_id) values (:user, :movie)";
+	public function addComment($user,$movie,$comment) {
+		$sql = "insert into comments (user_id, movie_id, comment) values (:user, :movie, :comment)";
 		$conn = $this->getConnection();
 		try {
 			$stmt = $conn->prepare($sql);
 			$stmt->bindParam(":user", $user);
 			$stmt->bindParam(":movie", $movie);
+			$stmt->bindParam(":comment", $comment);
 			$stmt->execute();
 			$conn = null;
 		}
