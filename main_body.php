@@ -40,7 +40,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	</div>
 	<div>
 		<div class="poster-container center">
-			<form method="post" action="main_handler.php">
+			<form method="get" action="main_handler.php">
 				<img class="center movie-poster" 
 					type="image"
 					src=<?php echo '"'.$movies[$pos]['poster'].'"';?>>
