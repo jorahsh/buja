@@ -15,6 +15,10 @@ if (!empty($seen)) {
 		unset($_SESSION['movie_id']);
 	}
 }
+else {
+	echo "seen is not set =(";
+	exit;
+}
 
 if(!empty($view)) {
 	if(isset($_SESSION['view']) && $_SESSION['view'] === $view) {
