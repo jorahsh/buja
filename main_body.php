@@ -2,6 +2,7 @@
 session_start();
 
 require_once'Movie_Dao.php';
+require_once'Comments_Dao.php';
 
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	header('Location: https://stark-beyond-19703.herokuapp.com');
@@ -12,9 +13,10 @@ if (!isset($_SESSION['user'])) {
   	exit;
 }
 
-$dao = new Movie_Dao();
+$m_dao = new Movie_Dao();
+$c_dao = new COmments_Dao();
 $user = $_SESSION['user'];
-$movies = $dao->getMoviesUserHasNotSeen($user);
+$movies = $m_dao->getMoviesUserHasNotSeen($user);
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 
 if(isset($_SESSION['movie_id'])) {
@@ -24,6 +26,8 @@ else {
 	$pos = rand(0, (count($movies) - 1));
 	$_SESSION['movie_id'] = $pos;
 }
+
+$comments = $c_dao->getMovieComments($movies[$pos]['id']);
 ?>
 
 <div>
