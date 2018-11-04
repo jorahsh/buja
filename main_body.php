@@ -56,16 +56,18 @@ else {
 	</div>
 <?php
 if(isset($_SESSION['view'])) {
+?>	<div class="center">
+<?php
 	if($_SESSION['view'] === 'description') { ?>
-		<div class="center">
 			<p class="center-text center description-width">
 				<?php echo htmlentities($movies[$pos]['description']); ?>
 			</p>
-		</div>
 <?php	}
 	if($_SESSION['view'] === 'comments') { ?>
-
-<?php	}
+		
+<?php	} ?>
+	</div>
+<?php
 }
 ?>	
 	<div class="genre-bar">
