@@ -28,6 +28,7 @@ else {
 }
 
 $comments = $c_dao->getMovieComments($movies[$pos]['id']);
+
 ?>
 
 <div>
@@ -44,7 +45,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 					type="image" 
 					src=<?php echo '"'. $movies[$pos]['poster'] . '"';?>
 					name="seen"
-					value=<?php echo '"' . $pos . '"';?>>
+					value=<?php echo '"' . $movies[$pos]['id'] . '"';?>>
 				<input type="image" value="submit" class="seen-movie" src="./img/eyeball.png">
 			</form>
 		</div>
