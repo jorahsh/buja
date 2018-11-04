@@ -4,7 +4,7 @@ session_start();
 
 require_once 'Movie_Dao.php';
 
-$seen = $_REQUEST['seen'];
+$seen = $_POST['seen'];
 $view = $_POST['view'];
 $user = $_SESSION['user'];
 
