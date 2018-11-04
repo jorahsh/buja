@@ -41,12 +41,12 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	<div>
 		<div class="poster-container center">
 			<form method="post" action="main_handler.php">
-				<input class="center movie-poster" 
+				<img class="center movie-poster" 
 					type="image"
 					src=<?php echo '"'.$movies[$pos]['poster'].'"';?>>
 				<input type="image"
 					name="seen"
-					value="success!"
+					value=<?php echo '"'.$movies[$pos]['id'].'"';?>
 					class="seen-movie" 
 					src="./img/eyeball.png">
 			</form>
