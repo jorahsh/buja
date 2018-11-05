@@ -72,17 +72,19 @@ if(isset($_SESSION['view'])) {
 				<?php echo htmlentities($movies[$pos]['description']); ?>
 			</p>
 <?php	}
-if($_SESSION['view'] === 'comments') { ?>
-	<form method="post" action="main_handler.php">
-		<div class="center">
-			Leave your comment here:<input type="text" name="comment">
-			<input type="submit" value="Add Comment!">
-		</div>
-	</form>
-	<table>
+	if($_SESSION['view'] === 'comments') { ?>
+		<form method="post" action="main_handler.php">
+			<div class="center">
+				Leave your comment here:<input type="text" name="comment">
+				<input type="submit" value="Add Comment!">
+			</div>
+		</form>
+		<table>
 <?php		foreach($comments as $comment) {
 			echo "<tr><td>".$comment['username']."</td><td>".$comment['comment']."</td><td>".$comment['date']."</td></tr>";
-		}	
+		}
+?>		</table>
+<?php
 	} ?>
 	</div>
 <?php
