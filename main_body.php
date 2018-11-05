@@ -65,7 +65,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	</div>
 <?php
 if(isset($_SESSION['view'])) {
-?>	<div class="center">
+?>	<div class="center center-text">
 <?php
 	if($_SESSION['view'] === 'description') { ?>
 			<p class="center-text center description-width">
