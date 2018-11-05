@@ -79,7 +79,6 @@ if(isset($_SESSION['view'])) {
 				<input type="submit" value="Add Comment!">
 			</div>
 		</form>
-		<div class="center center-text">
 		<table align="center">
 <?php		foreach($comments as $comment) {
 			echo '<tbody>
@@ -89,7 +88,6 @@ if(isset($_SESSION['view'])) {
 				</tbody>';
 		}
 ?>		</table>
-		</div>
 <?php
 	} ?>
 	</div>
