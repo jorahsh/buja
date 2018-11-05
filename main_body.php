@@ -75,12 +75,14 @@ if(isset($_SESSION['view'])) {
 		</div>
 <?php	}
 	if($_SESSION['view'] === 'comments') { ?>
+		<div class="center-text">
 		<form method="post" action="main_handler.php">
 			<div class="center">
 				Leave your comment here:<input class="wide" type="text" name="comment">
 				<input type="submit" value="Add Comment!">
 			</div>
 		</form>
+		</div>
 		<table align="center">
 		<tbody>
 <?php		foreach($comments as $comment) {
