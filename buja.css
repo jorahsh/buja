@@ -115,13 +115,13 @@ body {
 }
 
 .left-arrow-circle {
-	position: fixed;
+	position: absolute;
 	left: 5%;
 	top: 40%;
 }
 
 .right-arrow-circle {
-	position: fixed;
+	position: absolute;
 	right: 5%;
 	top: 40%;
 }
