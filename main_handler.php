@@ -10,7 +10,7 @@ $user = $_SESSION['user'];
 
 if (!empty($seen)) {
 	$dao = new Movie_Dao();
-	/*$dao->addSeenMovie($user,$seen);*/
+	$dao->addSeenMovie($user,$seen);
 	if(isset($_SESSION['movie_id'])) {
 		unset($_SESSION['movie_id']);
 	}
