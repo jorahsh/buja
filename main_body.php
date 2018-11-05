@@ -81,9 +81,11 @@ if(isset($_SESSION['view'])) {
 		</form>
 		<table class="center center-text">
 <?php		foreach($comments as $comment) {
-			echo '<tr style="margin-left:auto;margin-right:auto;"><td class="comment-username">'.htmlentities($comment['username']).'</td>
-			<td class="comment">'.htmlentities($comment['comment']).'</td>
-			<td class="comment-date">'.$comment['date'].'</td></tr>';
+			echo '<tbody class="center">
+				<tr><td class="comment-username">'.htmlentities($comment['username']).'</td>
+				<td class="comment">'.htmlentities($comment['comment']).'</td>
+				<td class="comment-date">'.$comment['date'].'</td></tr>
+				</tbody>';
 		}
 ?>		</table>
 <?php
