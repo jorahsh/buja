@@ -80,7 +80,7 @@ if(isset($_SESSION['view'])) {
 			</div>
 		</form>
 		<div class="center center-text">
-		<table>
+		<table align="center">
 <?php		foreach($comments as $comment) {
 			echo '<tbody>
 				<tr><td>'.htmlentities($comment['username']).'</td>
