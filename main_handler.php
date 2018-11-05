@@ -4,7 +4,7 @@ session_start();
 
 require_once 'Movie_Dao.php';
 
-$seen = $_REQUEST['seen'];
+$seen = $_POST['seen'];
 $view = $_POST['view'];
 $user = $_SESSION['user'];
 
@@ -14,14 +14,6 @@ if (!empty($seen)) {
 	if(isset($_SESSION['movie_id'])) {
 		unset($_SESSION['movie_id']);
 	}
-}
-else {
-	echo "seen was not request =(";
-	$seen = $_POST['seen'];
-	if (empty($seen)) {
-		echo "seen is not either post or request =(";
-	}
-	exit;
 }
 
 if(!empty($view)) {
