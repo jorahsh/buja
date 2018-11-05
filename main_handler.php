@@ -9,10 +9,11 @@ $view = $_POST['view'];
 $comment = $_POST['comment'];
 $user = $_SESSION['user'];
 $movie = $_SESSION['movie'];
-$dao = new Movie_Dao();
+$m_dao = new Movie_Dao();
+$c_dao = new Comments_Dao();
 
 if (!empty($seen)) {
-	$dao->addSeenMovie($user,$seen);
+	$m_dao->addSeenMovie($user,$seen);
 	if(isset($_SESSION['curr_movie'])) {
 		unset($_SESSION['curr_movie']);
 	}
@@ -29,7 +30,7 @@ if(!empty($view)) {
 
 if(!empty($comment)){
 	if(strlen($comment) > 0) {
-		$dao->addComment($user,$movie,$comment);
+		$c_dao->addComment($user,$movie,$comment);
 	}
 	else {
 	}
