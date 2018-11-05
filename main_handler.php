@@ -16,6 +16,7 @@ if (!empty($seen)) {
 	}
 }
 else {
+	echo "seen was not post =(";
 	$seen = $_REQUEST['seen'];
 	if (!empty($seen)) {
 		echo "seen is not either post or request =(";
