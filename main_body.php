@@ -68,7 +68,7 @@ if(isset($_SESSION['view'])) {
 ?>	<div class=>
 <?php
 	if($_SESSION['view'] === 'description') { ?>
-		<div class="center center-text">
+		<div class="center">
 			<p class="center-text center description-width">
 				<?php echo htmlentities($movies[$pos]['description']); ?>
 			</p>
@@ -76,7 +76,7 @@ if(isset($_SESSION['view'])) {
 <?php	}
 	if($_SESSION['view'] === 'comments') { ?>
 		<form method="post" action="main_handler.php">
-			<div class="center center-text">
+			<div class="center">
 				Leave your comment here:<input class="wide" type="text" name="comment">
 				<input type="submit" value="Add Comment!">
 			</div>
