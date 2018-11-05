@@ -19,14 +19,15 @@ $user = $_SESSION['user'];
 $movies = $m_dao->getMoviesUserHasNotSeen($user);
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 
-if(isset($_SESSION['movie_id'])) {
-	$pos = $_SESSION['movie_id'];
+if(isset($_SESSION['curr_movie'])) {
+	$pos = $_SESSION['curr_movie'];
 }
 else {
 	$pos = rand(0, (count($movies) - 1));
-	$_SESSION['movie_id'] = $pos;
+	$_SESSION['curr_movie'] = $pos;
 }
 
+$_SESSION['movie'] = ($movies[$pos]['id']);
 $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 
 ?>
@@ -71,9 +72,18 @@ if(isset($_SESSION['view'])) {
 				<?php echo htmlentities($movies[$pos]['description']); ?>
 			</p>
 <?php	}
-	if($_SESSION['view'] === 'comments') { ?>
-		
-<?php	} ?>
+if($_SESSION['view'] === 'comments') { ?>
+	<form method="post" action="main_handler.php">
+		<div>
+			Leave your comment here:<input type="text" name="comment">
+			<input type="submit" value="Add Comment!">
+		</div>
+	</form>
+	<table>
+<?php		foreach($comments as $comment) {
+			echo "<tr><td>".$comment['username']."</td><td>".$comment['comment']."</td><td>".$comment['date']."</td></tr>";
+		}	
+	} ?>
 	</div>
 <?php
 }
