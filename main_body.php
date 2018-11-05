@@ -74,7 +74,7 @@ if(isset($_SESSION['view'])) {
 <?php	}
 	if($_SESSION['view'] === 'comments') { ?>
 		<form method="post" action="main_handler.php">
-			<div class="comment-input">
+			<div class="center center-text">
 				Leave your comment here:<input class="wide" type="text" name="comment">
 				<input type="submit" value="Add Comment!">
 			</div>
