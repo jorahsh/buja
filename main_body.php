@@ -87,9 +87,10 @@ if(isset($_SESSION['view'])) {
 		<tbody>
 <?php		foreach($comments as $comment) {
 			echo 
-				'<tr class="border-bottom"><td class="table-username">'.htmlentities($comment['username']).'</td>
-				<td class="table-comment">'.htmlentities($comment['comment']).'</td>
-				<td class="table-date">'.$comment['date'].'</td></tr>';
+				'<tr class="border-bottom">
+				<td class="table-username center-text">'.htmlentities($comment['username']).'</td>
+				<td class="table-comment center-text">'.htmlentities($comment['comment']).'</td>
+				<td class="table-date center-text">'.$comment['date'].'</td></tr>';
 		}
 ?>
 		</tbody>
