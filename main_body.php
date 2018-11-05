@@ -80,14 +80,16 @@ if(isset($_SESSION['view'])) {
 			</div>
 		</form>
 		<table align="center">
+		<tbody>
 <?php		foreach($comments as $comment) {
-			echo '<tbody>
-				<tr><td class="table-username">'.htmlentities($comment['username']).'</td>
+			echo 
+				'<tr><td class="table-username">'.htmlentities($comment['username']).'</td>
 				<td class="table-comment">'.htmlentities($comment['comment']).'</td>
-				<td class="table-date">'.$comment['date'].'</td></tr>
-				</tbody>';
+				<td class="table-date">'.$comment['date'].'</td></tr>';
 		}
-?>		</table>
+?>
+		</tbody>
+		</table>
 <?php
 	} ?>
 	</div>
