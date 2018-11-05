@@ -74,14 +74,16 @@ if(isset($_SESSION['view'])) {
 <?php	}
 	if($_SESSION['view'] === 'comments') { ?>
 		<form method="post" action="main_handler.php">
-			<div class="center">
-				Leave your comment here:<input type="text" name="comment">
+			<div class="comment-input">
+				Leave your comment here:<input class="wide" type="text" name="comment">
 				<input type="submit" value="Add Comment!">
 			</div>
 		</form>
-		<table>
+		<table class"comment-input">
 <?php		foreach($comments as $comment) {
-			echo "<tr><td>".$comment['username']."</td><td>".$comment['comment']."</td><td>".$comment['date']."</td></tr>";
+			echo '<tr><td class="comment-username">'.htmlentities($comment['username']).'</td>
+			<td class="comment">'.htmlentities($comment['comment']).'</td>
+			<td class="comment-date">'.$comment['date'].'</td></tr>';
 		}
 ?>		</table>
 <?php
