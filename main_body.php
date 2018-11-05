@@ -65,12 +65,14 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	</div>
 <?php
 if(isset($_SESSION['view'])) {
-?>	<div class="center center-text">
+?>	<div class=>
 <?php
 	if($_SESSION['view'] === 'description') { ?>
+		<div class="center center-text">
 			<p class="center-text center description-width">
 				<?php echo htmlentities($movies[$pos]['description']); ?>
 			</p>
+		</div>
 <?php	}
 	if($_SESSION['view'] === 'comments') { ?>
 		<form method="post" action="main_handler.php">
