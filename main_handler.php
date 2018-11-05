@@ -3,6 +3,7 @@
 session_start();
 
 require_once 'Movie_Dao.php';
+require_once 'Comments_Dao.php';
 
 $seen = $_POST['seen'];
 $view = $_POST['view'];
