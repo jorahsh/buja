@@ -174,7 +174,7 @@ body {
 	margin-left: 10px;
 }
 
-tr {
+.border-bottom {
 	border-bottom: 2px solid #AAA;
 }
 
