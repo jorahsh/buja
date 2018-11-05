@@ -174,9 +174,16 @@ body {
 	margin-left: 10px;
 }
 
-td {
-	left: 5px;
-	right: 5px;
+.table-username {
+	width: 100px;
+}
+
+.table-comment {
+	width: 75%;
+}
+
+.table-date {
+	width: 200px;
 }
 
 .genre-bar {
