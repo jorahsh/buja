@@ -79,7 +79,7 @@ if(isset($_SESSION['view'])) {
 				<input type="submit" value="Add Comment!">
 			</div>
 		</form>
-		<table class"comment-input">
+		<table class"center center-text">
 <?php		foreach($comments as $comment) {
 			echo '<tr><td class="comment-username">'.htmlentities($comment['username']).'</td>
 			<td class="comment">'.htmlentities($comment['comment']).'</td>
