@@ -15,6 +15,13 @@ if (!empty($seen)) {
 		unset($_SESSION['movie_id']);
 	}
 }
+else {
+	$seen = $_REQUEST['seen'];
+	if (!empty($seen)) {
+		echo "seen is not either post or request =(";
+		exit;
+	}
+}
 
 if(!empty($view)) {
 	if(isset($_SESSION['view']) && $_SESSION['view'] === $view) {
