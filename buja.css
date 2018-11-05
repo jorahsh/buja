@@ -170,8 +170,12 @@ body {
 }
 
 .wide {
-	width: 25%;
+	width: 30%;
 	margin-left: 10px;
+}
+
+tr {
+	border-bottom: 2px solid #AAA;
 }
 
 .table-username {
