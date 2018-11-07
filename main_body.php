@@ -47,6 +47,9 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 			<input type="image" src="./img/left-arrow-circle.png">
 		</form>
 	</div>
+	<div class="center-text">
+		<?php echo $pos; ?>
+	</div>
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
