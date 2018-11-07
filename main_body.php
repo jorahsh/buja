@@ -22,6 +22,7 @@ $test = array();
 
 foreach($movies as $movie) { 
 	$test = array_merge($test, preg_split('/,/', $movie['genre']));
+	$test = array_unique($test);
 }
 
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
