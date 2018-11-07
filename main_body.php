@@ -40,10 +40,12 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 
 <div>
 	<div class="left-arrow-circle">
-		<input type="hidden"
-			name="seek"
-			value="left">
-		<input type="image" src="./img/left-arrow-circle.png">
+		<form method="post" action="main_handler.php">
+			<input type="hidden"
+				name="seek"
+				value="left">
+			<input type="image" src="./img/left-arrow-circle.png">
+		</form>
 	</div>
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
@@ -64,10 +66,12 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 		</div>
 	</div>
 	<div class="right-arrow-circle">				
-		<input type="hidden"
-			name="seek"
-			value="right">
-		<input type="image" src="./img/right-arrow-circle.png">
+		<form method="post" action="main_handler.php">
+			<input type="hidden"
+				name="seek"
+				value="right">
+			<input type="image" src="./img/right-arrow-circle.png">
+		</form>
 	</div>
 	<div class="center-text">
 		<form method="post" action="main_handler.php">
