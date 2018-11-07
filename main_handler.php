@@ -45,6 +45,7 @@ if(!empty($seek)) {
 	else {
 		$_SESSION['curr_movie'] = $_SEssion['curr_movie'] - 1;
 	}
+	unset($_SESSION['seek']);
 }
 		
 
