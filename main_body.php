@@ -17,6 +17,13 @@ $m_dao = new Movie_Dao();
 $c_dao = new COmments_Dao();
 $user = $_SESSION['user'];
 $movies = $m_dao->getMoviesUserHasNotSeen($user);
+
+$test = array();
+
+foreach($movies as $movie) {
+	$test.array_fill($movie['genre']);
+}
+
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 
 if(isset($_SESSION['curr_movie'])) {
@@ -48,7 +55,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 		</form>
 	</div>
 	<div class="center-text">
-		<?php echo $pos; ?>
+		<?php print_r($test); ?>
 	</div>
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
