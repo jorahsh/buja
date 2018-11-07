@@ -21,6 +21,12 @@ $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 
 if(isset($_SESSION['curr_movie'])) {
 	$pos = $_SESSION['curr_movie'];
+	if($pos < 0) {
+		$pos = $pos + count($movies);
+	}
+	else {
+		$pos = $pos % count($movies);
+	}
 }
 else {
 	$pos = rand(0, (count($movies) - 1));
@@ -34,6 +40,9 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 
 <div>
 	<div class="left-arrow-circle">
+		<input type="hidden"
+			name="seek"
+			value="left">
 		<input type="image" src="./img/left-arrow-circle.png">
 	</div>
 	<div class="center-text large-text">
@@ -54,7 +63,10 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 			</form>
 		</div>
 	</div>
-	<div class="right-arrow-circle">
+	<div class="right-arrow-circle">				
+		<input type="hidden"
+			name="seek"
+			value="right">
 		<input type="image" src="./img/right-arrow-circle.png">
 	</div>
 	<div class="center-text">

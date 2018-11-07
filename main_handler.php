@@ -8,6 +8,7 @@ require_once 'Comments_Dao.php';
 $seen = $_POST['seen'];
 $view = $_POST['view'];
 $comment = $_POST['comment'];
+$seek = $_POST['seek'];
 $user = $_SESSION['user'];
 $movie = $_SESSION['movie'];
 $m_dao = new Movie_Dao();
@@ -36,6 +37,17 @@ if(!empty($comment)){
 	else {
 	}
 }
+
+if(!empty($seek)) {
+	if($seek === 'right'){
+		$_SESSION['curr_movie'] = $_SEssion['curr_movie'] + 1;
+	}
+	else {
+		$_SESSION['curr_movie'] = $_SEssion['curr_movie'] - 1;
+	}
+	unset($_SESSION['seek']);
+}
+		
 
 header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 
