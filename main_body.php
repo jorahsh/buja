@@ -21,7 +21,7 @@ $movies = $m_dao->getMoviesUserHasNotSeen($user);
 $test = array();
 
 foreach($movies as $movie) {
-	$test.array_fill($movie['genre']);
+	$test.array_push($movie['genre']);
 }
 
 $genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
