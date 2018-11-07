@@ -39,11 +39,12 @@ if(!empty($comment)){
 }
 
 if(!empty($seek)) {
+	$pos = $_SESSION['curr_movie'];
 	if($seek === 'right'){
-		$_SESSION['curr_movie'] = $_SEssion['curr_movie'] + 1;
+		$_SESSION['curr_movie'] = $pos + 1;
 	}
 	else {
-		$_SESSION['curr_movie'] = $_SEssion['curr_movie'] - 1;
+		$_SESSION['curr_movie'] = $pos - 1;
 	}
 	unset($_SESSION['seek']);
 }
