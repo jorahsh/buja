@@ -20,7 +20,8 @@ $movies = $m_dao->getMoviesUserHasNotSeen($user);
 
 $test = array();
 
-foreach($movies as $movie) { 
+foreach($movies as $movie) {
+	/*this will one day be the genres array */	
 	$test = array_merge($test, preg_split('/,\s/', $movie['genre']));
 	$test = array_unique($test);
 }
@@ -54,9 +55,6 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 				value="left">
 			<input type="image" src="./img/left-arrow-circle.png">
 		</form>
-	</div>
-	<div class="center-text">
-		<?php print_r($test); ?>
 	</div>
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
