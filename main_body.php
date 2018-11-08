@@ -111,7 +111,7 @@ if(isset($_SESSION['view'])) {
 <?php
 	if(isset($_SESSION['comment_error'])) { ?>
 		<div class="center-text">
-			<p class="description-width">
+			<p class="center-text center description-width">
 				<?php echo $_SESSION['comment_error']; unset($_SESSION['comment_error']);?>
 			</p>
 		</div>
