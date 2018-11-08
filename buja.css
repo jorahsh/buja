@@ -184,7 +184,8 @@ body {
 
 .table-comment {
 	width: 75%;
-	overflow: wrap;
+	max-width:75%;
+	text-overflow: wrap;
 }
 
 .table-date {
