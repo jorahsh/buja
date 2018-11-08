@@ -10,6 +10,9 @@ $password = $_POST['create_password'];
 
 if (empty($username)) {
 	$_SESSION['create_error'][] = 'please enter a username';
+	if (isset($_SESSION['create_username']) {
+		unset($_SESSION['create_username']);
+	}
 }
 else { 
 	if (strlen($username) < 3) {
@@ -23,6 +26,9 @@ else {
 
 if (empty($email)) {
 	$_SESSION['create_error'][] = 'please enter an email';
+	if (isset($_SESSION['create_email']) {
+		unset($_SESSION['create_email']);
+	}
 }
 else {
 	if (!preg_match('/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/', $email)) {
