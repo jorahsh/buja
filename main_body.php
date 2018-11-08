@@ -123,7 +123,7 @@ if(isset($_SESSION['view'])) {
 			echo 
 				'<tr class="border-bottom">
 				<td class="table-username center-text">'.htmlentities($comment['username']).'</td>
-				<td class="table-comment center-text">'.htmlentities($comment['comment']).'</td>
+				<td><div class="table-comment center-text">'.htmlentities($comment['comment']).'</div></td>
 				<td class="table-date center-text">'.$comment['date'].'</td></tr>';
 		}
 ?>
