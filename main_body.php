@@ -117,7 +117,7 @@ if(isset($_SESSION['view'])) {
 		</div>
 <?php	}
 ?>
-		<table align="center">
+		<table class="full" align="center">
 		<tbody>
 <?php		foreach($comments as $comment) {
 			echo 
