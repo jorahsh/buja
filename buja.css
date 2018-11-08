@@ -184,6 +184,7 @@ body {
 
 .table-comment {
 	width: 75%;
+	max-width: 75%;
 	word-wrap: break-word;
 }
 
