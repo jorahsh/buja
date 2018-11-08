@@ -31,10 +31,11 @@ if(!empty($view)) {
 }
 
 if(!empty($comment)){
-	if(strlen($comment) > 0) {
-		$c_dao->addComment($user,$movie,$comment);
+	if(strlen($comment) > 191) {
+		$_SESSION['comment_error'] = 'comments cannot be more than 191 characters long';
 	}
-	else {
+	elseif(strlen($comment) > 0) {
+		$c_dao->addComment($user,$movie,$comment);
 	}
 }
 

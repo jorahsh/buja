@@ -108,6 +108,15 @@ if(isset($_SESSION['view'])) {
 			</div>
 		</form>
 		</div>
+<?php
+	if(isset($_SESSION['comment_error'])) { ?>
+		<div class="center-text">
+			<p class="description-width">
+				<?php echo $_SESSION['comment_error']; unset($_SESSION['comment_error']);?>
+			</p>
+		</div>
+<?php	}
+?>
 		<table align="center">
 		<tbody>
 <?php		foreach($comments as $comment) {
