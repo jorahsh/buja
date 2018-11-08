@@ -90,7 +90,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	</div>
 <?php
 if(isset($_SESSION['view'])) {
-?>	<div class=>
+?>	<div  class="full">
 <?php
 	if($_SESSION['view'] === 'description') { ?>
 		<div class="center">
@@ -117,7 +117,7 @@ if(isset($_SESSION['view'])) {
 		</div>
 <?php	}
 ?>
-		<table class="full" align="center">
+		<table align="center">
 		<tbody>
 <?php		foreach($comments as $comment) {
 			echo 
