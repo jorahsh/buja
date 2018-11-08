@@ -15,6 +15,9 @@ else {
 	if (strlen($username) < 3) {
 		$_SESSION['create_error'][] = 'username must be at least 3 characters';
 	}
+	elseif (strlen($username) > 191) {
+		$_SESSION['create_error'][] = 'username cannot be more than 191 characters long';
+	}
 	$_SESSION['create_username'] = $username;
 }
 
@@ -33,6 +36,9 @@ if (empty($password)) {
 }
 elseif (strlen($password) < 5) {
 	$_SESSION['create_error'][] = 'passowrd must be at least 5 characters';
+}
+elseif (strlen($password) > 191) {
+	$_SESSION['create_error'][] = 'password cannot be more than 191 characters long';
 }
 
 if (!isset($_SESSION['create_error'])) {
