@@ -60,19 +60,22 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
 	<div id="poster_carousel">
+<?php
+	foreach($movies as $movie) { ?>
 		<div class="poster-container center">
 			<form method="post" action="main_handler.php">
 				<img class="center movie-poster" 
-					src=<?php echo '"'.$movies[$pos]['poster'].'"';?>>
+					src=<?php echo '"'.$movie['poster'].'"';?>>
 				<input type="hidden"
 					name="seen"
-					value=<?php echo '"'.$movies[$pos]['id'].'"';?>>
+					value=<?php echo '"'.$movies['id'].'"';?>>
 				<input type="image"
 					name="submit"
 					class="seen-movie" 
 					src="./img/eyeball.png">
 			</form>
 		</div>
+<?php	} ?>
 	</div>
 	<div class="right-arrow-circle">				
 		<form method="post" action="main_handler.php">
