@@ -59,7 +59,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
-	<div>
+	<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
 		<div class="poster-container center">
 			<form method="post" action="main_handler.php">
 				<img class="center movie-poster" 
