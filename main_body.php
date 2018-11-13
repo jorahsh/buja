@@ -51,7 +51,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
-	<div id="poster_carousel" class="poster-container wide">
+	<div class="multiple-items">
 <?php
 	foreach($movies as $movie) { ?>
 		<div class="poster-container center">
