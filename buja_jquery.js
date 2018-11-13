@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$('.center').slick({
+$('#poster_carousel').slick({
   centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
