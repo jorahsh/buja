@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.multiple-items').slick({
+	$('.poster-carousel').slick({
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 3
