@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -48,26 +49,39 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 ?>
 
 <div>
+	<div class="left-arrow-circle">
+		<form method="post" action="main_handler.php">
+			<input type="hidden"
+				name="seek"
+				value="left">
+			<input type="image" src="./img/left-arrow-circle.png">
+		</form>
+	</div>
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
-	<div class="poster-carousel">
-<?php
-	foreach($movies as $movie) { ?>
-		<div>
+	<div>
+		<div class="poster-container center">
 			<form method="post" action="main_handler.php">
 				<img class="center movie-poster" 
-					src=<?php echo '"'.$movie['poster'].'"';?>>
+					src=<?php echo '"'.$movies[$pos]['poster'].'"';?>>
 				<input type="hidden"
 					name="seen"
-					value=<?php echo '"'.$movies['id'].'"';?>>
+					value=<?php echo '"'.$movies[$pos]['id'].'"';?>>
 				<input type="image"
 					name="submit"
 					class="seen-movie" 
 					src="./img/eyeball.png">
 			</form>
 		</div>
-<?php	} ?>
+	</div>
+	<div class="right-arrow-circle">				
+		<form method="post" action="main_handler.php">
+			<input type="hidden"
+				name="seek"
+				value="right">
+			<input type="image" src="./img/right-arrow-circle.png">
+		</form>
 	</div>
 	<div class="center-text">
 		<form method="post" action="main_handler.php">
@@ -133,7 +147,4 @@ foreach($genres as $genre){
 ?>
 		</ul>
 	</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
-<script src="buja_jquery.js"></script> 
 </div>
