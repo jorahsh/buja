@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$('.poster-carousel').slick({
 		dots: true,
+		arrows: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
