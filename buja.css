@@ -157,6 +157,10 @@ body {
 	display: none;
 }
 
+.poster-carousel {
+	width: 80%;
+}
+
 .poster-container {
 	width:300;
 }
