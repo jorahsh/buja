@@ -26,7 +26,7 @@ else {
 
 if (empty($email)) {
 	$_SESSION['create_error'][] = 'please enter an email';
-	if (isset($_SESSION['create_email']) {
+	if (isset($_SESSION['create_email'])) {
 		unset($_SESSION['create_email']);
 	}
 }
