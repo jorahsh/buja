@@ -10,7 +10,7 @@ $password = $_POST['create_password'];
 
 if (empty($username)) {
 	$_SESSION['create_error'][] = 'please enter a username';
-	if (isset($_SESSION['create_username']) {
+	if (isset($_SESSION['create_username'])) {
 		unset($_SESSION['create_username']);
 	}
 }
