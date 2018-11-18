@@ -9,7 +9,7 @@ $(document).ready(function(){
         	animationTime: 1000,
         	showTime: 4000
         });
-	var top_li = $('li[style*="z-index: 10001;"]');
-	$('.movie-title').text($('li[style*="z-index: 10001;"] img').val());
-	alert(top_li.val());
+	var title = $('li[style*="z-index: 10001;"]').attr('value');
+	$('.movie-title').text(title);
+	alert(title);
 });
