@@ -9,6 +9,6 @@ $(document).ready(function(){
         	animationTime: 1000,
         	showTime: 4000
         });
-	$('.movie-title').text($('li[style="z-index: 10001;"]').val());
-	alert($('li[style="z-index: 10001;"]').val());
+	$('.movie-title').text($('li[style="z-index: 10001;"] img').val());
+	alert($('li[style="z-index: 10001;"] img').val());
 });
