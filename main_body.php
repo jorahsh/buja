@@ -57,7 +57,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 <?php
 	for($i = 0; $i < 7; $i++) { ?>
 			<li data-title=<?php echo '"'.$movies[$i]['title'].'"';?>
-			    data-desc=<?php echo htmlentities($movies[$pos]['description']); ?>
+			    data-desc=<?php echo '"'.htmlentities($movies[$i]['description']).'"'; ?>
 			>
 				<img src=<?php echo '"'.$movies[$i]['poster'].'"';?>
 				/>
