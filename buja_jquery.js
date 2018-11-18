@@ -9,4 +9,5 @@ $(document).ready(function(){
         	animationTime: 1000,
         	showTime: 4000
         });
+	$('.movie-title').text($('li[style="z-index: 10001;"]').val());
 });

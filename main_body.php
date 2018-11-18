@@ -50,14 +50,16 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 
 <div>
 	<div class="center-text large-text">
-		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
+		<p class="movie-title"><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
 	<div class="container" id="container">
 		<ul>
 <?php
 	for($i = 0; $i < 7; $i++) { ?>
 			<li>
-				<img src=<?php echo '"'.$movies[$i]['poster'].'"';?> alt="" />
+				<img src=<?php echo '"'.$movies[$i]['poster'].'"';?>
+				     value=<?php echo '"'.$movies[$i]['title'].'"';?>
+				/>
 			</li>
 <?php } ?>
 			<img src="./img/left-arrow-circle.png" class="left">
