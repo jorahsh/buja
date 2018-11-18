@@ -36,11 +36,11 @@ $(document).ready(function(){
 	});
 
 	$('.show-description').click(function() {
-		if($('movie-description').css('display') == 'none'){
-			$('movie-description').css('display','block');
+		if($('.movie-description').css('display') == 'none'){
+			$('.movie-description').css('display','block');
 		}
 		else {
-			$('movie-description').css('display','none');
+			$('.movie-description').css('display','none');
 		}
 
 	});
