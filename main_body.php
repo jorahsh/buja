@@ -52,33 +52,6 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
-    <div class="container" id="container">
-        <ul>
-            <li>
-                <img src="https://unsplash.it/400/250?image=974" alt="" />
-            </li>
-            <li>
-                <img src="https://unsplash.it/400/250?image=973" alt="" />
-            </li>
-            <li>
-                <img src="https://unsplash.it/400/250?image=972" alt="" />
-            </li>
-            <li>
-                <img src="https://unsplash.it/400/250?image=971" alt="" />
-            </li>
-            <li>
-                <img src="https://unsplash.it/400/250?image=970" alt="" />
-            </li>
-            <li>
-                <img src="https://unsplash.it/400/250?image=964" alt="" />
-            </li>
-	    <li>
-		<img src=<?php echo '"'.preg_replace('/\\.[^.\\s]{1,3}$/', '', $movies[0]['poster']).'"';?> alt="" />
-	    </li>
-            <img src="./img/left-arrow-circle.png" class="left">
-            <img src="./img/right-arrow-circle.png" class="right">
-        </ul>
-    </div>
 	<div class="container" id="container">
 		<ul>
 <?php
