@@ -2,7 +2,7 @@ $(document).ready(function(){
         $('.container').carousel({
             num: 5,
             maxWidth: 300,
-            maxHeight: 350,
+            maxHeight: 450,
             distance: 50,
             scale: 0.6,
             animationTime: 1000,
