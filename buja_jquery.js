@@ -9,10 +9,19 @@ $(document).ready(function(){
         	animationTime: 1000,
         	showTime: 4000
         });
-	var title = $('li[style*="z-index: 10001;"]').attr('value');
-	$('.movie-title').text(title);
-	$('.right').click(function(){
+
+	var changeTitle = function() {
 		var title = $('li[style*="z-index: 10001;"]').attr('value');
 		$('.movie-title').text(title);
+	};
+
+	changeTitle();
+
+	$('.right').click(function(){
+		changeTitle();
+	});
+
+	$('.left').click(function() {
+		changeTitle();
 	});
 });
