@@ -52,6 +52,18 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
+	<div class="container" id="container">
+		<ul>
+<?php
+	for($i = 0; $i < 8; $i++) { ?>
+			<li>
+				<img src=<?php echo '"'.$movies[$i]['poster'].'"';?> alt=""/>
+			</li>
+<?php } ?>
+			<img class="left" src="./img/left-arrow-circle.png">
+			<img class="right" src="./img/right-arrow-circle.png">
+		</ul>
+	</div>
     <div class="container" id="container">
         <ul>
             <li>
@@ -79,18 +91,6 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
             <img src="./img/right-arrow-circle.png" class="right">
         </ul>
     </div>
-	<div class="container" id="container">
-		<ul>
-<?php
-	for($i = 0; $i < 8; $i++) { ?>
-			<li>
-				<img src=<?php echo '"'.$movies[$i]['poster'].'"';?> alt=""/>
-			</li>
-<?php } ?>
-			<img class="left" src="./img/left-arrow-circle.png">
-			<img class="right" src="./img/right-arrow-circle.png">
-		</ul>
-	</div>
 	<div class="center-text">
 		<form method="post" action="main_handler.php">
 			<input type="submit" name="view" value="description">
