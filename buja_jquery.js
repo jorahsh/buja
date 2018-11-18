@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 	});
 
-	$('show-description').click(function() {
+	$('.show-description').click(function() {
 		alert("booty!");
 		$('movie-description').toggle();
 	});
