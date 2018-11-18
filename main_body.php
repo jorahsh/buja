@@ -84,7 +84,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 <?php
 	foreach($movies as $movie) { ?>
 			<li>
-				<img src=<?php echo '"'.$movie['poster'].'"';?> alt="">
+				<img src=<?php echo '"'.$movie['poster'].'"';?> alt=""/>
 			</li>
 <?php } ?>
 			<img class="left" src="./img/left-arrow-circle.png">
