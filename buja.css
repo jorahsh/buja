@@ -222,7 +222,7 @@ ul {
 }
 
 .movie-description {
-	display: none;
+	visibility: hidden;
 }
 
 .description-width {
