@@ -128,5 +128,4 @@ foreach($genres as $genre){
 ?>
 		</ul>
 	</div>
-<?php include "jquery.php"; ?>
 </div>
