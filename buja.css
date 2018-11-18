@@ -165,6 +165,10 @@ ul {
 	position: absolute;
 }
 
+button {
+	margin: 10px;
+}
+
 .poster-container {
 	width:300;
 }
