@@ -11,5 +11,8 @@ $(document).ready(function(){
         });
 	var title = $('li[style*="z-index: 10001;"]').attr('value');
 	$('.movie-title').text(title);
-	alert(title);
+	$('.right').onClick(function(){
+		var title = $('li[style*="z-index: 10001;"]').attr('value');
+		$('.movie-title').text(title);
+	});
 });
