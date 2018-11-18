@@ -67,23 +67,20 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 			<img src="./img/right-arrow-circle.png" class="right">
 		</ul>
 	</div>
+		<button class="show-description"></button>
 	<div class="center-text">
 		<form method="post" action="main_handler.php">
-			<input type="submit" name="view" value="description">
 			<input type="submit" name="view" value="comments">
 		</form>
 	</div>
-<?php
-if(isset($_SESSION['view'])) {
-?>	<div  class="full">
-<?php
-	if($_SESSION['view'] === 'description') { ?>
-		<div class="center">
-			<p class="center-text center description-width">
+	<div class="full">
+		<div class="movie-description center">
+			<p class="description-text center-text center description-width">
 				<?php echo htmlentities($movies[$pos]['description']); ?>
 			</p>
 		</div>
-<?php	}
+<?php
+if(isset($_SESSION['view'])) {
 	if($_SESSION['view'] === 'comments') { ?>
 		<div class="center-text">
 		<form method="post" action="main_handler.php">
@@ -93,7 +90,9 @@ if(isset($_SESSION['view'])) {
 			</div>
 		</form>
 		</div>
+
 <?php
+	}
 	if(isset($_SESSION['comment_error'])) { ?>
 		<div class="center-text">
 			<p class="center-text center description-width">
@@ -115,11 +114,8 @@ if(isset($_SESSION['view'])) {
 		</tbody>
 		</table>
 <?php
-	} ?>
+} ?>
 	</div>
-<?php
-}
-?>	
 	<div class="genre-bar">
 		<input type="image" class= "grey-arrow-right" src="./img/grey-arrow-right.png">
 		<input type="image" class= "grey-arrow-left" src="./img/grey-arrow-left.png">

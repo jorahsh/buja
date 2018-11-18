@@ -10,18 +10,35 @@ $(document).ready(function(){
         	showTime: 4000
         });
 
+	var centerMovie = $('li[style*="z-index: 10001;"]');
+
 	var changeTitle = function() {
-		var title = $('li[style*="z-index: 10001;"]').data('title');
+		var title = centerMovie.data('title');
 		$('.movie-title').text(title);
 	};
 
+	var changeDescription = function() {
+		var desc = centerMovie.data('desc');
+		$('.description-text').text(desc);
+	}
+
 	changeTitle();
+	changeDescription();
 
 	$('.right').click(function(){
 		changeTitle();
+		changeDescription();
+
 	});
 
 	$('.left').click(function() {
 		changeTitle();
+		changeDescription();
+
 	});
+
+	$('show-description').click(function() {
+		$('movie-description').toggle();
+	});
+	
 });

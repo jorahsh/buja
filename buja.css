@@ -221,6 +221,10 @@ ul {
 	margin: 4px;
 }
 
+.movie-description {
+	display: hidden;
+}
+
 .description-width {
 	width: 70%;
 }
