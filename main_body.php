@@ -75,6 +75,9 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
             <li>
                 <img src="https://unsplash.it/400/250?image=954" alt="" />
 	    </li>
+	    <li>
+		<img src=<?php echo '"'.$movies[0]['poster'].'"';?> alt="" />
+	    </li>
             <img src="./img/left-arrow-circle.png" class="left">
             <img src="./img/right-arrow-circle.png" class="right">
         </ul>
