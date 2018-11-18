@@ -8,4 +8,5 @@ $(document).ready(function(){
             animationTime: 1000,
             showTime: 4000
         });
+	alert('what a bunch of shit!');
 });
