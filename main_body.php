@@ -67,7 +67,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 			<img src="./img/right-arrow-circle.png" class="right">
 		</ul>
 	</div>
-		<button class="show-description"></button>
+		<button class="show-description">Description</button>
 	<div class="center-text">
 		<form method="post" action="main_handler.php">
 			<input type="submit" name="view" value="comments">
