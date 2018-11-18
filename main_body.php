@@ -49,14 +49,6 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 ?>
 
 <div>
-	<div class="left-arrow-circle">
-		<form method="post" action="main_handler.php">
-			<input type="hidden"
-				name="seek"
-				value="left">
-			<input type="image" src="./img/left-arrow-circle.png">
-		</form>
-	</div>
 	<div class="center-text large-text">
 		<p><?php echo htmlentities($movies[$pos]['title']); ?></p>
 	</div>
@@ -65,30 +57,12 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 <?php
 	foreach($movies as $movie) { ?>
 		<li>
-			<div>
-			<form method="post" action="main_handler.php">
-				<img class="center movie-poster" 
-					src=<?php echo '"'.$movie['poster'].'"';?>>
-				<input type="hidden"
-					name="seen"
-					value=<?php echo '"'.$movie['id'].'"';?>>
-				<input type="image"
-					name="submit"
-					class="seen-movie" 
-					src="./img/eyeball.png">
-			</form>
-			</div>
+			<img class="center movie-poster" src=<?php echo '"'.$movie['poster'].'"';?>>
 		</li>
 <?php } ?>
+			<img class="left" src="./img/left-arrow-circle.png">
+			<img class="right" src="./img/right-arrow-circle.png">
 		</ul>
-	</div>
-	<div class="right-arrow-circle">				
-		<form method="post" action="main_handler.php">
-			<input type="hidden"
-				name="seek"
-				value="right">
-			<input type="image" src="./img/right-arrow-circle.png">
-		</form>
 	</div>
 	<div class="center-text">
 		<form method="post" action="main_handler.php">
