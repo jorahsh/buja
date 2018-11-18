@@ -81,24 +81,12 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
     </div>
 	<div class="container" id="container">
 		<ul>
+<?php
+	for($i = 0; $i < 8; $i++) { ?>
 			<li>
-				<img src="sad_jack.jpg" alt="" />
+				<img src=<?php echo '"'.$movies[$i]['poster'].'"';?> alt="" />
 			</li>
-			<li>
-				<img src="sad_jack.jpg" alt="" />
-			</li>
-			<li>
-				<img src="sad_jack.jpg" alt="" />
-			</li>
-			<li>
-				<img src="sad_jack.jpg" alt="" />
-			</li>
-			<li>
-				<img src="sad_jack.jpg" alt="" />
-			</li>
-			<li>
-				<img src="sad_jack.jpg" alt="" />
-			</li>
+<?php } ?>
 			<img src="./img/left-arrow-circle.png" class="left">
 			<img src="./img/right-arrow-circle.png" class="right">
 		</ul>
