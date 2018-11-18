@@ -11,7 +11,7 @@ $(document).ready(function(){
         });
 
 	var changeTitle = function() {
-		var title = $('li[style*="z-index: 10001;"]').attr('value');
+		var title = $('li[style*="z-index: 10001;"]').data('title');
 		$('.movie-title').text(title);
 	};
 
