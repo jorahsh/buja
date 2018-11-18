@@ -10,5 +10,5 @@ $(document).ready(function(){
         	showTime: 4000
         });
 	$('.movie-title').text($('li[style="z-index: 10001;"] img').val());
-	alert($('ul li img').val());
+	alert($('ul li img').html());
 });
