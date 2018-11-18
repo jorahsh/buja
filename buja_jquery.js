@@ -9,6 +9,7 @@ $(document).ready(function(){
         	animationTime: 1000,
         	showTime: 4000
         });
+	var top_li = $('li[style="display: block;position: absolute;z-index: 10001;overflow: hidden;width: 300px;height: 450px;left: 100px;top: 0px;"]');
 	$('.movie-title').text($('li[style="z-index: 10001;"] img').val());
-	alert($('ul li[style="z-index: 10001;"]').html());
+	alert(top_li.html());
 });
