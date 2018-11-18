@@ -76,7 +76,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
                 <img src="https://unsplash.it/400/250?image=954" alt="" />
 	    </li>
 	    <li>
-		<img src="https://picsum.photos/200/300/?random" alt="" />
+		<img src="https://picsum.photos/400/250/?random" alt="" />
 	    </li>
             <img src="./img/left-arrow-circle.png" class="left">
             <img src="./img/right-arrow-circle.png" class="right">
