@@ -10,15 +10,13 @@ $(document).ready(function(){
         	showTime: 4000
         });
 
-	var centerMovie = $('li[style*="z-index: 10001;"]');
-
 	var changeTitle = function() {
-		var title = centerMovie.data('title');
+		var title = $('li[style*="z-index: 10001;"]').data('title');
 		$('.movie-title').text(title);
 	};
 
 	var changeDescription = function() {
-		var desc = centerMovie.data('desc');
+		var desc = $('li[style*="z-index: 10001;"]').data('desc');
 		$('.description-text').text(desc);
 	}
 
@@ -38,8 +36,13 @@ $(document).ready(function(){
 	});
 
 	$('.show-description').click(function() {
-		alert("booty!");
-		$('movie-description').toggle();
+		if($('movie-description').css('display') == 'none'){
+			$('movie-description').css('display','block');
+		}
+		else {
+			$('movie-description').css('display','none');
+		}
+
 	});
 	
 });
