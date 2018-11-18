@@ -1,5 +1,5 @@
 $(document).ready(function(){
-        $('.poster-carousel').carousel({
+        $('.container').carousel({
             num: 5,
             maxWidth: 450,
             maxHeight: 300,
