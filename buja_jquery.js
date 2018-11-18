@@ -1,33 +1,12 @@
 $(document).ready(function(){
-	$('.poster-carousel').slick({
-		dots: true,
-		arrows: true,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		autoplay: true,
-		autoplaySpeed: 2000,
-		responsive: [
-		{
-			breakpoint: 1024,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 3,
-			}
-		},
-		{
-			breakpoint: 600,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 2
-			}
-		},
-		{
-			breakpoint: 480,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-			}
-		}
-	]
+	$('.poster-carousel').carousel({
+		num: 3,
+		maxWidth: 250,
+		maxHeight: 150,
+		autoPlay: true,
+		showTime: 2000,
+		animationTime: 300,
+		scale: 0.8,
+		distance: 50
 	});
 });
