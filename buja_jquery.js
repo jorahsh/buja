@@ -1,4 +1,13 @@
 $(document).ready(function(){
+        $('.poster-carousel').carousel({
+            num: 5,
+            maxWidth: 450,
+            maxHeight: 300,
+            distance: 50,
+            scale: 0.6,
+            animationTime: 1000,
+            showTime: 4000
+        });
 	$('.poster-carousel').carousel({
 		num: 3,
 		maxWidth: 250,
