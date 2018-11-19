@@ -13,7 +13,9 @@ $(document).ready(function(){
 	$('.slick').slick({
   		infinite: true,
   		slidesToShow: 6,
-  		slidesToScroll: 3
+  		slidesToScroll: 3,
+		adaptiveHeight: true,
+		dots: true
 	});
 
 	var changeTitle = function() {
