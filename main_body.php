@@ -19,15 +19,12 @@ $c_dao = new COmments_Dao();
 $user = $_SESSION['user'];
 $movies = $m_dao->getMoviesUserHasNotSeen($user);
 
-$test = array();
+$genres = array();
 
 foreach($movies as $movie) {
-	/*this will one day be the genres array */	
-	$test = array_merge($test, preg_split('/,\s/', $movie['genre']));
-	$test = array_unique($test);
+	$genres = array_merge($test, preg_split('/,\s/', $movie['genre']));
+	$genres = array_unique($test);
 }
-
-$genres = array('comedy', 'horror', 'action', 'drama', 'animated', 'family');
 
 if(isset($_SESSION['curr_movie'])) {
 	$pos = $_SESSION['curr_movie'];
@@ -77,10 +74,8 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 				<?php echo htmlentities($movies[$pos]['description']); ?>
 			</p>
 		</div>
-<?php
-if(isset($_SESSION['view'])) {
-	if($_SESSION['view'] === 'comments') { ?>
-		<div class="center-text">
+
+		<div class="comments-input center-text">
 		<form method="post" action="main_handler.php">
 			<div class="center">
 				Leave your comment here:<input class="wide" type="text" name="comment">
@@ -117,13 +112,11 @@ if(isset($_SESSION['view'])) {
 	<div class="genre-bar">
 		<input type="image" class= "grey-arrow-right" src="./img/grey-arrow-right.png">
 		<input type="image" class= "grey-arrow-left" src="./img/grey-arrow-left.png">
-		<ul class="genre-list">
 <?php
-foreach($genres as $genre){
-	echo "<li class='genre-tab'> $genre </li>";
-}
+foreach($genres as $genre){ ?>
+		<div><?php echo $genre; ?></div>
+<?php	}
 ?>
-		</ul>
 	</div>
 <?php include "jquery.php"; ?>
 </div>

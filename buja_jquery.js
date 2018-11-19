@@ -10,6 +10,12 @@ $(document).ready(function(){
         	showTime: 4000
         });
 
+	$('.genre-bar').slick({
+  		infinite: true,
+  		slidesToShow: 3,
+  		slidesToScroll: 3
+	});
+
 	var changeTitle = function() {
 		var title = $('li[style*="z-index: 10001;"]').data('title');
 		$('.movie-title').text(title);
@@ -45,4 +51,12 @@ $(document).ready(function(){
 
 	});
 	
+	$('.show-comments').click(function() {
+		if($('.comments-input').css('display') == 'none') {
+			$('.comments-input').css('display', 'block');
+		}
+		else {
+			$('.comments-input').css('display', 'none');
+		}
+	});
 });
