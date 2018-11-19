@@ -14,8 +14,6 @@ $(document).ready(function(){
   		infinite: true,
   		slidesToShow: 6,
   		slidesToScroll: 3,
-		adaptiveHeight: true,
-		centerMode: true,
 		dots: true
 	});
 
