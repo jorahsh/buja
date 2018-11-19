@@ -22,8 +22,8 @@ $movies = $m_dao->getMoviesUserHasNotSeen($user);
 $genres = array();
 
 foreach($movies as $movie) {
-	$genres = array_merge($test, preg_split('/,\s/', $movie['genre']));
-	$genres = array_unique($test);
+	$genres = array_merge($genres, preg_split('/,\s/', $movie['genre']));
+	$genres = array_unique($genres);
 }
 
 if(isset($_SESSION['curr_movie'])) {
