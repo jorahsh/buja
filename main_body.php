@@ -110,11 +110,13 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	<div class="genre-bar">
 		<input type="image" class= "grey-arrow-right" src="./img/grey-arrow-right.png">
 		<input type="image" class= "grey-arrow-left" src="./img/grey-arrow-left.png">
+		<div class="slick">
 <?php
 foreach($genres as $genre){ ?>
 		<div><?php echo $genre; ?></div>
 <?php	}
 ?>
+		</div>
 	</div>
 <?php include "jquery.php"; ?>
 </div>

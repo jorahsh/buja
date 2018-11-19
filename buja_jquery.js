@@ -10,9 +10,9 @@ $(document).ready(function(){
         	showTime: 4000
         });
 
-	$('.genre-bar').slick({
+	$('.slick').slick({
   		infinite: true,
-  		slidesToShow: 3,
+  		slidesToShow: 6,
   		slidesToScroll: 3
 	});
 
