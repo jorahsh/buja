@@ -247,13 +247,7 @@ button {
 .genre-tab {
 	border-style: outset;
 	background-color: #AAA;
-	width: calc(12% - (4px));
-	border-style: outset;
-	height: 15px;
-	margin: 12px 2%;
-	padding: 4px 0 8px 0;
 	text-align: center;
-	display: inline-block;
 	font-size: 16px;
 	overflow: hidden;
 }
