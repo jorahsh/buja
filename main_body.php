@@ -108,7 +108,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 		</table>
 	</div>
 	<div class="genre-bar">
-		<div class="slick">
+		<div class="slick center">
 <?php
 foreach($genres as $genre){ ?>
 		<div><h3 class="genre-tab"><?php echo $genre; ?></h3></div>
