@@ -85,7 +85,6 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 		</div>
 
 <?php
-	}
 	if(isset($_SESSION['comment_error'])) { ?>
 		<div class="center-text">
 			<p class="center-text center description-width">
@@ -96,18 +95,17 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 ?>
 		<table align="center">
 		<tbody>
-<?php		foreach($comments as $comment) {
-			echo 
-				'<tr class="border-bottom">
-				<td class="table-username center-text">'.htmlentities($comment['username']).'</td>
-				<td class="table-comment center-text">'.htmlentities($comment['comment']).'</td>
-				<td class="table-date center-text">'.$comment['date'].'</td></tr>';
-		}
+<?php		
+	foreach($comments as $comment) {
+		echo 
+			'<tr class="border-bottom">
+			<td class="table-username center-text">'.htmlentities($comment['username']).'</td>
+			<td class="table-comment center-text">'.htmlentities($comment['comment']).'</td>
+			<td class="table-date center-text">'.$comment['date'].'</td></tr>';
+	}
 ?>
 		</tbody>
 		</table>
-<?php
-} ?>
 	</div>
 	<div class="genre-bar">
 		<input type="image" class= "grey-arrow-right" src="./img/grey-arrow-right.png">
