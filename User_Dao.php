@@ -76,4 +76,5 @@ class User_Dao {
 			$this->log->LogFatal($e);
 		}
 		return $ret;
+	}
 }
