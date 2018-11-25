@@ -170,7 +170,7 @@ button {
 	margin: 10px;
 }
 
-.poster-container:hover {
+form:hover > .poster-container {
 	opacity: 0.8;
 }
 
