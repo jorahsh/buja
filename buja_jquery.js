@@ -30,6 +30,7 @@ $(document).ready(function(){
 	var changeComments = function() {
 		var movieId = $('li[style*="z-index: 10001;"]').data('movie-id');
 		$.post('comments_handler.php', {movieId: movieId}, function(data) {
+			alert(data);
 			$('.movie-comments').html(data);
 		});
 	}
