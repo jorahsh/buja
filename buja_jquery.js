@@ -47,6 +47,9 @@ $(document).ready(function(){
 	});
 
 	$('.left').click(function() {
+		$.post('main_handler.php'). $('#poster-left').serialize(), function(data, status) {
+			alert(status);
+		});
 		shiftContent();
 	});
 
