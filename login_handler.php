@@ -30,11 +30,11 @@ if (!isset($_SESSION['login_error'])) {
 			header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 		}
 		else {
-			$_SESSION['login_error'][] = 'invalid username or password';
+			$_SESSION['login_error'][] = 'DATABASE_ERROR: invalid username or password';
 		}
 	}
 	else {
-		$_SESSION['login_error'][] = 'invalid username or password';
+		$_SESSION['login_error'][] = 'PHP_ERROR: invalid username or password';
 	}
 }
 
