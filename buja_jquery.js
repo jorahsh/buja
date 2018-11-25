@@ -27,19 +27,24 @@ $(document).ready(function(){
 		$('.description-text').text(desc);
 	}
 
-	changeTitle();
-	changeDescription();
+	var changeComments = function () {
+		$.post('main_handler.php', $('li[style*="z-index: 10001;"]').data('movie-id'));
+	}
 
-	$('.right').click(function(){
+	var shiftContent = function () {
 		changeTitle();
 		changeDescription();
+		changeComments();
+	}
 
+	shiftContent();
+
+	$('.right').click(function(){
+		shiftContent();
 	});
 
 	$('.left').click(function() {
-		changeTitle();
-		changeDescription();
-
+		shiftContent();
 	});
 
 	$('.show-description').click(function() {
@@ -65,8 +70,6 @@ $(document).ready(function(){
 		if($('.movie-description').css('display') == 'block'){
 			$('.movie-description').css('display','none');
 		}
-		alert($('li[style*="z-index: 10001;"]').data('movie-id'));
-		$.post('main_handler.php', $('li[style*="z-index: 10001;"]').data('movie-id'));
 	});
 
 	$('.genre-tab').click(function() {
