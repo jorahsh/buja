@@ -65,7 +65,8 @@ $(document).ready(function(){
 		if($('.movie-description').css('display') == 'block'){
 			$('.movie-description').css('display','none');
 		}
-			
+		alert($('li[style*="z-index: 10001;"]').data('movie-id'));
+		$.post('main_handler.php', $('li[style*="z-index: 10001;"]').data('movie-id'));
 	});
 
 	$('.genre-tab').click(function() {
