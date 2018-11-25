@@ -74,7 +74,7 @@ $(document).ready(function(){
 	});
 
 	$('.select-genre').click(function() {
-		$.post('main_handler.php', $('genre_tab').data('genre'), function() {
-			alert("we did a post!")});
+		$.post('main_handler.php', $('genre_tab').data('genre'), function(data) {
+			alert("data")});
 	});
 });
