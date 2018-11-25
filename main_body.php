@@ -92,7 +92,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 			</li>
 <?php } ?>	
 <?php
-	for($i = 3; $i > 0; $i++) { 
+	for($i = 3; $i > 0; $i--) { 
 		$index = $pos - $i; 
 		if($index < 0) {
 			$index = $index + count($movies);
