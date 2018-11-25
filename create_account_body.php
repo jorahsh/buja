@@ -25,17 +25,20 @@ unset($_SESSION['create_error']);
 		</div>
 		<form method="post" action="create_account_handler.php">
 			<div class="absolute-left input-first">
-				username: <input type="text" name="create_username"
+				<label for="create_username">username:</label> 
+				<input type="text" name="create_username"
 			<?php if(isset($_SESSION['create_username'])){echo 'value="' . $_SESSION['create_username'] . '"';}?>
 			>
 			</div>
 			<div class="absolute-left input-second">
-				email: <input class="email-field" type="text" name="create_email"
+				<label for="create_email">email:</label>
+				<input class="email-field" type="text" name="create_email"
 			<?php if(isset($_SESSION['create_email'])){echo 'value="' . $_SESSION['create_email'] . '"';}?>
 			>
 			</div>
 			<div class="absolute-left input-third">
-				passowrd: <input type="password" name="create_password">
+				<label for="create_password">passowrd:</label>
+				<input type="password" name="create_password">
 			</div>
 			<div class="absolute-left create-submit">
 				<input type="submit" value="submit">

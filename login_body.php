@@ -25,12 +25,14 @@ unset($_SESSION['login_error']);
 		</div>
 		<form method="post" action="login_handler.php">
 			<div class="absolute-left input-first">
-				username: <input type="text" name="username"
+				<label for="username">username:</label>
+				<input type="text" name="username"
 				<?php if(isset($_SESSION['username'])) { echo 'value="' . $_SESSION['username'] . '"'; }?>
 			>
 			</div>
 			<div class="absolute-left input-second">
-				passowrd: <input type="password" name="password">
+				<label for="password">passowrd:</label>
+				<input type="password" name="password">
 			</div>
 			<div class="absolute-left input-third">
 				<input type="submit" value="login">
