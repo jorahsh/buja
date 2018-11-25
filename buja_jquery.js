@@ -27,16 +27,9 @@ $(document).ready(function(){
 		$('.description-text').text(desc);
 	}
 
-	var changeComments = function () {
-		$.post('/main_handler.php', $('genre_tab').data('genre'), function(data, status) {
-			alert(status);
-		});
-	}
-
 	var shiftContent = function () {
 		changeTitle();
 		changeDescription();
-		changeComments();
 	}
 
 	shiftContent();
