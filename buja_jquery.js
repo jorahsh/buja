@@ -27,6 +27,13 @@ $(document).ready(function(){
 		$('.description-text').text(desc);
 	}
 
+	var changeComments = function() {
+		var movieId = $('li[style*="z-index: 10001;"]').data('movie-id');
+		$.post('main_handler.php', {movieId: movieId}, function(data, status) {
+			alert(data);
+		});
+	}
+
 	var shiftContent = function () {
 		changeTitle();
 		changeDescription();
