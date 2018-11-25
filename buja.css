@@ -169,10 +169,6 @@ button {
 	margin: 10px;
 }
 
-.poster-container {
-	width:300;
-}
-
 .poster-container:hover {
 	opacity: 0.8;
 }

@@ -58,8 +58,19 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 			    data-desc=<?php echo '"'.htmlentities($movies[$index]['description']).'"'; ?>
 			    data-movie-id=<?php echo '"'.htmlentities($movies[$index]['id']).'"'; ?>
 			>
-				<img src=<?php echo '"'.$movies[$index]['poster'].'"';?>
-				/>
+				<div>
+					<form method="post" action="main_handler.php">
+						<img class="poster-container"
+						     src=<?php echo '"'.$movies[$index]['poster'].'"';?>>
+						<input type="hidden"
+						       name="seen"
+						       value=<?php echo '"'.$movies[$pos]['id'].'"';?>>
+						<input type="image"
+						       name="submit"
+						       class="seen-movie" 
+						       src="./img/eyeball.png">
+					</form>
+				</div>
 			</li>
 <?php } ?>	
 			<div class="left">
