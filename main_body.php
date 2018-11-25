@@ -61,9 +61,19 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 				<img src=<?php echo '"'.$movies[$index]['poster'].'"';?>
 				/>
 			</li>
-<?php } ?>
-			<img src="./img/left-arrow-circle.png" class="left">
-			<img src="./img/right-arrow-circle.png" class="right">
+<?php } ?>	
+			<div class="left">
+				<form method="post" action="main_handler.php">
+					<input type="hidden" name="seek" value="left">
+					<input type="image" src="./img/left-arrow-circle.png">
+				</form>
+			</div>
+			<div class="right">				
+				<form method="post" action="main_handler.php">
+					<input type="hidden" name="seek" value="right">
+					<input type="image" src="./img/right-arrow-circle.png">
+				</form>
+			</div>
 		</ul>
 	</div>
 	<div class="center-text">
