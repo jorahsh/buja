@@ -35,6 +35,7 @@ $(document).ready(function(){
 		var movieId = getMovieId();
 		$.post('comments_handler.php', {movieId: movieId}, function(data, status) {
 			$('.movie-comments').html(data);
+			alert(status);
 		});
 	};
 
