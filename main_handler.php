@@ -9,6 +9,7 @@ $seen = $_POST['seen'];
 $view = $_POST['view'];
 $comment = $_POST['comment'];
 $seek = $_POST['seek'];
+$genre = $_POST['genre'];
 $user = $_SESSION['user'];
 $movie = $_SESSION['movie'];
 $m_dao = new Movie_Dao();
@@ -50,6 +51,10 @@ if(!empty($seek)) {
 	unset($_SESSION['seek']);
 }
 		
+if(!empty($genre)) {
+	echo "houston...we have a genre";
+	exit;
+}
 
 header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 
