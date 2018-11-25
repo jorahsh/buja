@@ -4,7 +4,7 @@ session_start();
 
 require_once 'Comments_Dao.php';
 
-$movie = $_POST['movieId'];
+$movie = $_REQUEST['movieId'];
 $comment = $_POST['comment'];
 $user = $_SESSION['user'];
 
