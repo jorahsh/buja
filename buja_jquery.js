@@ -37,6 +37,7 @@ $(document).ready(function(){
 	var shiftContent = function () {
 		changeTitle();
 		changeDescription();
+		changeComments();
 	}
 
 	shiftContent();
