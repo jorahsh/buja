@@ -235,6 +235,11 @@ form:hover > .seen-movie {
 	width: 90%;
 }
 
+.slick-arrow {
+	width: 40px;
+	height: 40px;
+}
+
 .select-genre > form {
 	padding: 10px;
 }
