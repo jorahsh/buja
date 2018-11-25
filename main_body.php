@@ -179,7 +179,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 			<form method="post" action="main_handler.php">
 <?php
 foreach($genres as $genre){ ?>
-				<div class="submit-genre">
+				<div class="select-genre">
 					<input type="hidden" name="genre" value=<?php echo '"'.$genre.'"'; ?>>
 				<h3 class="genre-tab"> <?php echo $genre; ?></h3>
 				</div>
