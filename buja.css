@@ -174,7 +174,7 @@ button {
 	opacity: 0.8;
 }
 
-.poster-container:hover > form > .seen-movie {
+form > .seen-movie {
 	display: block;
 }
 
