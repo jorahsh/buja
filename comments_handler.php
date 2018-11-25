@@ -11,7 +11,8 @@ if(isset($_REQUEST['movieId'])) {
 $c_dao = new Comments_Dao();
 
 if (!empty($movie)) {
-	$comments = $c_dao->getMovieComments($movie);}
+	$comments = $c_dao->getMovieComments($movie);
+}
 
 echo '<table align="center">
 	<tbody>';	
