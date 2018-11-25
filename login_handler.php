@@ -20,11 +20,18 @@ if (empty($password)) {
 
 if (!isset($_SESSION['login_error'])) {
 	$dao = new User_Dao();
-	$user = $dao->getUser($username,$password);
-	if ($user != null){
-		$_SESSION['logged_in'] = true;
-		$_SESSION['user'] = $user['id'];
-		header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
+	$password = $password.$username;
+	if(verify_password($password)) {
+		$password = password_hash($password, PASSWORD_BCRYPT);
+		$user = $dao->getUser($username,$password);
+		if ($user != null){
+			$_SESSION['logged_in'] = true;
+			$_SESSION['user'] = $user['id'];
+			header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
+		}
+		else {
+			$_SESSION['login_error'][] = 'invalid username or password';
+		}
 	}
 	else {
 		$_SESSION['login_error'][] = 'invalid username or password';
