@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 	var changeComments = function () {
 		$.post('main_handler.php', $('li[style*="z-index: 10001;"]').data('movie-id'), function() {
-			$(
+			
 		});
 	}
 
