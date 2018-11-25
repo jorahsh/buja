@@ -10,9 +10,6 @@ $user = $_SESSION['user'];
 
 $c_dao = new Comments_Dao();
 
-echo $movie;
-echo $user;
-
 if(!empty($movie)) {
 
 	if(!empty($comment)){
