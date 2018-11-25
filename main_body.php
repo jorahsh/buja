@@ -151,12 +151,10 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 		</div>
 		<div class="comments">
 			<div class="comments-input center-text">
-			<form method="post" action="main_handler.php">
 				<div class="center">
 					Leave your comment here:<input class="wide" type="text" id="comment">
 					<button class="submit-comment">Add Comment!</button>
 				</div>
-			</form>
 			</div>
 
 <?php
