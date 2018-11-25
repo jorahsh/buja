@@ -18,16 +18,21 @@ $m_dao = new Movie_Dao();
 $c_dao = new COmments_Dao();
 $user = $_SESSION['user'];
 $movies = $m_dao->getMoviesUserHasNotSeen($user);
-
-if(isset($_SESSION['genre'])) {
-	$movies = array_filter($movies, function($movie) { return (strpos($movie['genre'], $_SESSION['genre']) === false);});
-}
-
 $genres = array();
 
 foreach($movies as $movie) {
 	$genres = array_merge($genres, preg_split('/,\s/', $movie['genre']));
 	$genres = array_unique($genres);
+}
+
+if(isset($_SESSION['genre'])) {
+	$new_movies = array();
+	foreach($movies as $movie) {
+		if(strpos($movie['genre'], $_SESSION['genre']) !== false) {
+			array_push($new_movies, $movie);
+		}
+	}
+	$movies = $new_movies;
 }
 
 if(isset($_SESSION['curr_movie'])) {
