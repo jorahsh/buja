@@ -49,6 +49,8 @@ elseif (strlen($password) > 191) {
 
 if (!isset($_SESSION['create_error'])) {
 	$dao = new User_Dao();
+	$password = $password.$username;
+	$password = password_hash($password, PASSWORD_BCRYPT);
 	$ret = $dao->addUser($username,$email,$password);
 	if($ret === 1) {
 		$_SESSION['logged_in'] = true;
