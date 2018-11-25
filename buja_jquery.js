@@ -25,21 +25,21 @@ $(document).ready(function(){
 	var changeDescription = function() {
 		var desc = $('li[style*="z-index: 10001;"]').data('desc');
 		$('.description-text').text(desc);
-	}
+	};
 
 	var changeComments = function() {
 		var movieId = $('li[style*="z-index: 10001;"]').data('movie-id');
-		$.post('/comments_handler.php', {movieId: movieId}, function(data, status) {
+		$.post('comments_handler.php', {movieId: movieId}, function(data, status) {
 			alert(status);
 			$('.movie-comments').html(data);
 		});
-	}
+	};
 
 	var shiftContent = function () {
 		changeTitle();
 		changeDescription();
 		changeComments();
-	}
+	};
 
 	shiftContent();
 
