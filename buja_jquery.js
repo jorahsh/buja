@@ -81,6 +81,8 @@ $(document).ready(function(){
 	$('.submit-comment').click(function() {
 		var movieId = getMovieId();
 		var comment = $('#comment').val();
+		alert(movieId);
+		alert(comment);
 		$.post('comments_handler.php', {movieId: movieId, comment: comment}, function(data, status) {
 			$('.movie-comments').html(data);
 		});
