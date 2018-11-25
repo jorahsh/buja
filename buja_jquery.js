@@ -73,7 +73,8 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.genre-tab').click(function() {
+	$('.select-genre').click(function() {
+		alert("boooga boooga!");
 		$.post('main_handler.php', $('genre_tab').data('genre'));
 	});
 });
