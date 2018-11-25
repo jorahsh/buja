@@ -61,4 +61,19 @@ class User_Dao {
 		}
 		return $ret;
 	}
+
+	public function getPassword($username) {
+		$sql = "select password from user where username = :username";
+		$conn = $this->getConnection();
+		$stmt = $conn->prepare($sql);
+		try {
+			$stmt->bindParam(":username", $username);
+			$stmt->execute();
+			$ret = $stmt->fetch();
+			$conn = null;
+		}
+		catch (Exception $e) {
+			$this->log->LogFatal($e);
+		}
+		return $ret;
 }

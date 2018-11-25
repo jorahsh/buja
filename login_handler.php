@@ -21,7 +21,7 @@ if (empty($password)) {
 if (!isset($_SESSION['login_error'])) {
 	$dao = new User_Dao();
 	$password = $password.$username;
-	$hash = password_hash($password, PASSWORD_BCRYPT);
+	$hash = $dao->getPassword($username);
 	if(password_verify($password, $hash)) {
 		$user = $dao->getUser($username,$hash);
 		if ($user != null){

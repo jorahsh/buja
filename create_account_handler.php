@@ -54,7 +54,7 @@ if (!isset($_SESSION['create_error'])) {
 	$ret = $dao->addUser($username,$email,$hash);
 	if($ret === 1) {
 		$_SESSION['logged_in'] = true;
-		$user = $dao->getUser($username,$password);
+		$user = $dao->getUser($username,$hash);
 		$_SESSION['user'] = $user['id'];
 		header('Location: https://stark-beyond-19703.herokuapp.com/main.php');
 	}
