@@ -212,14 +212,8 @@ form:hover > .seen-movie {
 	background-color: black;
 }
 
-.grey-arrow-left {
-	float: left;
-	margin: 4px;
-}
-
-.grey-arrow-right {
-	float: right;
-	margin: 4px;
+.genre-bar > .slick > form {
+	display: inline block;
 }
 
 .movie-description {
