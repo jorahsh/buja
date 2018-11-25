@@ -20,8 +20,7 @@ $user = $_SESSION['user'];
 $movies = $m_dao->getMoviesUserHasNotSeen($user);
 
 if(isset($_SESSION['genre'])) {
-	$genre = $_SESSION['genre'];
-	$movies = array_filter($movies, function($movie) { return (strpos($movie['genre'], $genre) == FALSE);});
+	$movies = array_filter($movies, function($movie) { return (strpos($movie['genre'], $_SESSION['genre']) === false);});
 }
 
 $genres = array();
