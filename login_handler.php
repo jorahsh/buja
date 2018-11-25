@@ -22,6 +22,7 @@ if (!isset($_SESSION['login_error'])) {
 	$dao = new User_Dao();
 	$password = $password.$username;
 	$hash = $dao->getPassword($username);
+			$_SESSION['login_error'][] = $hash;
 	if(password_verify($password, $hash)) {
 		$user = $dao->getUser($username,$hash);
 		if ($user != null){
@@ -31,7 +32,6 @@ if (!isset($_SESSION['login_error'])) {
 		}
 		else {
 			$_SESSION['login_error'][] = 'DATABASE_ERROR: invalid username or password';
-			$_SESSION['login_error'][] = $hash;
 		}
 	}
 	else {
