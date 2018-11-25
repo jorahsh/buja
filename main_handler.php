@@ -4,10 +4,10 @@ if(isset($_REQUEST['movieId'])) {
 	echo $_REQUEST['movieId'];
 	exit;
 }
-if(isset($_POST['movieId'])) {
+/*if(isset($_POST['movieId'])) {
 	echo $_POST['movieId'];
 	exit;
-}
+}*/
 
 session_start();
 
