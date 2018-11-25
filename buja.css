@@ -213,7 +213,7 @@ form:hover > .seen-movie {
 }
 
 .genre-bar > .slick > form {
-	display: inline block;
+	display: inline-block;
 }
 
 .movie-description {
