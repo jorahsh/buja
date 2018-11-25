@@ -17,6 +17,10 @@ $(document).ready(function(){
 		dots: true
 	});
 
+	var getMovieId = function() {
+		return $('li[style*="z-index: 10001;"]').data('movie-id');
+	};
+
 	var changeTitle = function() {
 		var title = $('li[style*="z-index: 10001;"]').data('title');
 		$('.movie-title').text(title);
@@ -28,7 +32,7 @@ $(document).ready(function(){
 	};
 
 	var changeComments = function() {
-		var movieId = $('li[style*="z-index: 10001;"]').data('movie-id');
+		var movieId = getMovieId();
 		$.post('comments_handler.php', {movieId: movieId}, function(data, status) {
 			$('.movie-comments').html(data);
 		});
@@ -73,4 +77,11 @@ $(document).ready(function(){
 			$('.movie-description').css('display','none');
 		}
 	});
+
+	$('.submit-comment').click(function() {
+		var movieId = getMovieId();
+		var comment = $('#comment').val();
+		$.post('comments_handler.php', {movieId: movieId, comment: comment}, function(data, status) {
+			$('.movie-comments').html(data);
+		});
 });

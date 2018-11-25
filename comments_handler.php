@@ -4,10 +4,19 @@ session_start();
 
 require_once 'Comments_Dao.php';
 
-if(isset($_POST['movieId'])) {
-	$movie = $_POST['movieId'];
+$movie = $_POST['movieId'];
+$comment = $_POST['comment'];
+$user = $_SESSION['user'];
 
-	$c_dao = new Comments_Dao();
+$c_dao = new Comments_Dao();
+
+if(!empty($movie)) {
+
+	if(!empty($comment)){
+		if(strlen($comment) < 192 && strlen($comment) > 0) {
+			$c_dao->addComment($user,$movie,$comment);
+		}
+	}
 
 	$comments = $c_dao->getMovieComments($movie);
 

@@ -7,7 +7,6 @@ require_once 'Comments_Dao.php';
 
 $seen = $_POST['seen'];
 $view = $_POST['view'];
-$comment = $_POST['comment'];
 $seek = $_POST['seek'];
 $genre = $_POST['genre'];
 $user = $_SESSION['user'];
@@ -31,14 +30,6 @@ if(!empty($view)) {
 	}
 }
 
-if(!empty($comment)){
-	if(strlen($comment) > 191) {
-		$_SESSION['comment_error'] = 'comments cannot be more than 191 characters long';
-	}
-	elseif(strlen($comment) > 0) {
-		$c_dao->addComment($user,$movie,$comment);
-	}
-}
 
 if(!empty($seek)) {
 	$pos = $_SESSION['curr_movie'];
