@@ -131,10 +131,8 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 		</ul>
 	</div>
 	<div class="center-text">
-		<form method="post" action="main_handler.php">
-			<button name="view" value="description"class="show-description">Description</button>
-			<button name="view" value="comments"class="show-comments">Comments</button>
-		</form>
+		<button name="view" value="description"class="show-description">Description</button>
+		<button name="view" value="comments"class="show-comments">Comments</button>
 	</div>
 	<div class="full">
 		<div class="movie-description center">
