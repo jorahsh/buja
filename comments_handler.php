@@ -20,7 +20,7 @@ echo '<table align="center">
 			<td class="table-comment center-text">'.htmlentities($comment['comment']).'</td>
 			<td class="table-date center-text">'.$comment['date'].'</td></tr>';
 	}
-echo	'/tbody>
+echo	'</tbody>
 	</table>';
 
 }
