@@ -43,6 +43,8 @@ $(document).ready(function(){
 	shiftContent();
 
 	$('.right').click(function(){
+		$.post('main_handler.php', $('#poster-right').serialize(), function(data, status) {
+		});
 		shiftContent();
 	});
 

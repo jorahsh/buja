@@ -132,9 +132,9 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 				</form>
 			</div>
 			<div class="right">				
-				<form method="post" action="main_handler.php">
+				<form id="poster-right" method="post" action="main_handler.php">
 					<input type="hidden" name="seek" value="right">
-					<input type="image" src="./img/right-arrow-circle.png">
+					<img type="image" src="./img/right-arrow-circle.png">
 				</form>
 			</div>
 		</ul>
