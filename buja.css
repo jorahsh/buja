@@ -178,11 +178,11 @@ form:hover > .seen-movie {
 	display: block;
 }
 
-.poster-right > img {
+#poster-right > img {
 	cursor: pointer;
 }
 
-.poster-left > img {
+#poster-left > img {
 	cursor: pointer;
 }
 
