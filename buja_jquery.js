@@ -63,11 +63,11 @@ $(document).ready(function(){
 	});
 	
 	$('.show-comments').click(function() {
-		if($('.comments-input').css('display') == 'none') {
-			$('.comments-input').css('display', 'block');
+		if($('.comments').css('display') == 'none') {
+			$('.comments').css('display', 'block');
 		}
 		else {
-			$('.comments-input').css('display', 'none');
+			$('.comments').css('display', 'none');
 		}
 		if($('.movie-description').css('display') == 'block'){
 			$('.movie-description').css('display','none');
