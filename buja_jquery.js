@@ -30,7 +30,6 @@ $(document).ready(function(){
 	var changeComments = function() {
 		var movieId = $('li[style*="z-index: 10001;"]').data('movie-id');
 		$.post('comments_handler.php', {movieId: movieId}, function(data, status) {
-			alert(data);
 			$('.movie-comments').html(data);
 		});
 	};
@@ -73,11 +72,5 @@ $(document).ready(function(){
 		if($('.movie-description').css('display') == 'block'){
 			$('.movie-description').css('display','none');
 		}
-	});
-
-	$('.select-genre').click(function() {
-		$.post('/main_handler.php', {genre: $('genre_tab').data('genre')}, function(data, status) {
-			alert(data);
-		});
 	});
 });
