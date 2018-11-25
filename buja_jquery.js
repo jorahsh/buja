@@ -50,7 +50,6 @@ $(document).ready(function(){
 		$.post('main_handler.php'). $('#poster-left').serialize(), function(data, status) {
 			alert(status);
 		});
-		/*shiftContent();*/
 	});
 
 	$('.show-description').click(function() {
