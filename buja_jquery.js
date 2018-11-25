@@ -49,6 +49,9 @@ $(document).ready(function(){
 		else {
 			$('.movie-description').css('display','none');
 		}
+		if($('.comments-input').css('display') == 'block'){
+			$('.comments-input').css('display', 'none');
+		}
 
 	});
 	
@@ -59,5 +62,13 @@ $(document).ready(function(){
 		else {
 			$('.comments-input').css('display', 'none');
 		}
+		if($('.movie-description').css('display') == 'block'){
+			$('.movie-description').css('display','none');
+		}
+			
+	});
+
+	$('.genre-tab').click(function() {
+		$.post('main_handler.php', $('genre_tab').data('genre'));
 	});
 });

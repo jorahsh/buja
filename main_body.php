@@ -111,7 +111,8 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 		<div class="slick center">
 <?php
 foreach($genres as $genre){ ?>
-		<div><h3 class="genre-tab"><?php echo $genre; ?></h3></div>
+		<div><h3 class="genre-tab" 
+			data-genre=<?php echo '"'.$genre.'"'; ?>><?php echo $genre; ?></h3></div>
 <?php	}
 ?>
 		</div>
