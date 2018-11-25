@@ -235,6 +235,10 @@ form:hover > .seen-movie {
 	width: 90%;
 }
 
+.select-genre > form {
+	padding: 10px;
+}
+
 .genre-tab {
 	border-style: outset;
 	background-color: #AAA;
