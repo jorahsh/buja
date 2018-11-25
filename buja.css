@@ -212,10 +212,6 @@ form:hover > .seen-movie {
 	background-color: black;
 }
 
-.genre-bar > .slick > form {
-	display: inline-block;
-}
-
 .movie-description {
 	display: none;
 }

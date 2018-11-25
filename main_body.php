@@ -176,16 +176,16 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	</div>
 	<div class="genre-bar">
 		<div class="slick center">
-			<form method="post" action="main_handler.php">
 <?php
 foreach($genres as $genre){ ?>
-				<div class="select-genre">
+			<div class="select-genre">
+				<form method="post" action="main_handler.php">
 					<input type="hidden" name="genre" value=<?php echo '"'.$genre.'"'; ?>>
-				<h3 class="genre-tab"> <?php echo $genre; ?></h3>
-				</div>
+					<h3 class="genre-tab"> <?php echo $genre; ?></h3>
+				</form>
+			</div>
 <?php	}
 ?>
-			</form>
 		</div>
 	</div>
 <?php include "jquery.php"; ?>
