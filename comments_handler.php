@@ -5,7 +5,7 @@ session_start();
 require_once 'Comments_Dao.php';
 
 if(isset($_POST['movieId'])) {
-	$movie = $_POST'movieId'];
+	$movie = $_POST['movieId'];
 
 	$c_dao = new Comments_Dao();
 
