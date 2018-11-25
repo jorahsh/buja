@@ -4,11 +4,14 @@ session_start();
 
 require_once 'Comments_Dao.php';
 
-$movie = $_REQUEST['movieId'];
+$movie = $_POST['movieId'];
 $comment = $_POST['comment'];
 $user = $_SESSION['user'];
 
 $c_dao = new Comments_Dao();
+
+echo $movie;
+echo $user;
 
 if(!empty($movie)) {
 
