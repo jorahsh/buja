@@ -51,31 +51,6 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 	</div>
 	<div class="container" id="container">
 		<ul>
-<?php
-	for($i = 1; $i < 4; $i++) { 
-		$index = $pos - $i;
-		if($index < 0) {
-			$index = $index + count($movies);
-		}?>
-			<li data-title=<?php echo '"'.$movies[$index]['title'].'"';?>
-			    data-desc=<?php echo '"'.$movies[$index]['description'].'"'; ?>
-			    data-movie-id=<?php echo '"'.$movies[$index]['id'].'"'; ?>
-			>
-				<div>
-					<form method="post" action="main_handler.php">
-						<img class="poster-container"
-						     src=<?php echo '"'.$movies[$index]['poster'].'"';?>>
-						<input type="hidden"
-						       name="seen"
-						       value=<?php echo '"'.$movies[$index]['id'].'"';?>>
-						<input type="image"
-						       name="submit"
-						       class="seen-movie" 
-						       src="./img/eyeball.png">
-					</form>
-				</div>
-			</li>
-<?php } ?>	
 			<li data-title=<?php echo '"'.$movies[$pos]['title'].'"';?>
 			    data-desc=<?php echo '"'.$movies[$pos]['description'].'"'; ?>
 			    data-movie-id=<?php echo '"'.$movies[$pos]['id'].'"'; ?>
@@ -97,6 +72,31 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 <?php
 	for($i = 1; $i < 4; $i++) { 
 		$index = ($pos + $i) % count($movies); ?>
+			<li data-title=<?php echo '"'.$movies[$index]['title'].'"';?>
+			    data-desc=<?php echo '"'.$movies[$index]['description'].'"'; ?>
+			    data-movie-id=<?php echo '"'.$movies[$index]['id'].'"'; ?>
+			>
+				<div>
+					<form method="post" action="main_handler.php">
+						<img class="poster-container"
+						     src=<?php echo '"'.$movies[$index]['poster'].'"';?>>
+						<input type="hidden"
+						       name="seen"
+						       value=<?php echo '"'.$movies[$index]['id'].'"';?>>
+						<input type="image"
+						       name="submit"
+						       class="seen-movie" 
+						       src="./img/eyeball.png">
+					</form>
+				</div>
+			</li>
+<?php } ?>	
+<?php
+	for($i = 3; $i > 0; $i++) { 
+		$index = $pos - $i; 
+		if($index < 0) {
+			$index = $index + count($movies)
+		}?>
 			<li data-title=<?php echo '"'.$movies[$index]['title'].'"';?>
 			    data-desc=<?php echo '"'.$movies[$index]['description'].'"'; ?>
 			    data-movie-id=<?php echo '"'.$movies[$index]['id'].'"'; ?>
