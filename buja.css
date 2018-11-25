@@ -179,11 +179,11 @@ form:hover > .seen-movie {
 }
 
 .poster-right > img {
-	cursor: context-menu;
+	cursor: pointer;
 }
 
 .poster-left > img {
-	cursor: context-menu;
+	cursor: pointer;
 }
 
 .full {
@@ -255,7 +255,7 @@ form:hover > .seen-movie {
 	overflow: hidden;
 	width: 100%;
 	height: 40px;
-	cursor: context-menu;
+	cursor: pointer;
 }
 
 .footer {
