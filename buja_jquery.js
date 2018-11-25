@@ -59,7 +59,6 @@ $(document).ready(function(){
 		if($('.comments-input').css('display') == 'block'){
 			$('.comments-input').css('display', 'none');
 		}
-
 	});
 	
 	$('.show-comments').click(function() {
