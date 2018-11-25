@@ -4,15 +4,14 @@ session_start();
 
 require_once 'Comments_Dao.php';
 
-$movie = $_POST;
+if(isset($_REQUEST['movieId'])) {
+	$movie = $_REQUEST['movieId'];
+}
+
 $c_dao = new Comments_Dao();
 
 if (!empty($movie)) {
-	$c_dao->getMovieComments($movie);
-	if(isset($_SESSION['curr_movie'])) {
-		unset($_SESSION['curr_movie']);
-	}
-}
+	$comments = $c_dao->getMovieComments($movie);}
 
 echo '<table align="center">
 	<tbody>';	
@@ -25,5 +24,7 @@ echo '<table align="center">
 	}
 echo	'/tbody>
 	</table>';
+
+}
 
 exit;
