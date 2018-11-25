@@ -52,8 +52,13 @@ if(!empty($seek)) {
 }
 		
 if(!empty($genre)) {
-	echo "houston...we have a genre";
-	exit;
+	if($genre === 'no genre'){
+		unset($_SESSION['genre']);
+		unset($_SESSION['curr-movie']);
+	}
+	else {
+		$_SESSION['genre'] = $genre;
+	}
 }
 
 header('Location: https://stark-beyond-19703.herokuapp.com/main.php');

@@ -19,6 +19,11 @@ $c_dao = new COmments_Dao();
 $user = $_SESSION['user'];
 $movies = $m_dao->getMoviesUserHasNotSeen($user);
 
+if(isset($_SESSION['genre'])) {
+	$genre = $_SESSION['genre'];
+	$movies = array_filter($movies, function() { return strpos($movie['genre'], $genre);});
+}
+
 $genres = array();
 
 foreach($movies as $movie) {
