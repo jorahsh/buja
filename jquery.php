@@ -3,3 +3,4 @@
 <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
 <script src="js/Carousel.js"></script>
 <script src="buja_jquery.js"></script>
+<script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>

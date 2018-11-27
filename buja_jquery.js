@@ -85,4 +85,8 @@ $(document).ready(function(){
 			$('.movie-comments').html(data);
 		});
 	});
+
+	$('.tooltip').tooltipster({
+    		theme: 'tooltipster-punk'
+	});
 });
