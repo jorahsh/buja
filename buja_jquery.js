@@ -86,5 +86,7 @@ $(document).ready(function(){
 		});
 	});
 
-	$('.tooltip').tooltipster('show');
+	$('.seen-movie').on('mouseover', function() {
+		$('.tooltip').tooltipster('show');
+	});
 });
