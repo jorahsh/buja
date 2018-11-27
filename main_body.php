@@ -179,7 +179,7 @@ foreach($genres as $genre){ ?>
 				<form method="post" action="main_handler.php">
 					<input type="hidden" name="genre" value=<?php echo '"'.$genre.'"'; ?>>
 					<input type="submit" class="genre-tab 
-				<?php if($genre === $selected_genre){echo 'selected-genre'; ?>" 
+				<?php if($genre === $selected_genre){echo 'selected-genre';}?>" 
 						value=<?php echo '"'.$genre.'"'; ?>>
 				</form>
 			</div>
