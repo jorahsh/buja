@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	background-image: url('./img/red-fade-1.png');
+	background-repeat: no-repeat;
 }
 
 .nav-bar {
