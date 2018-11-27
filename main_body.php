@@ -120,8 +120,7 @@ $comments = $c_dao->getMovieComments($movies[$pos]['id']);
 						       value=<?php echo '"'.$movies[$index]['id'].'"';?>>
 						<input type="image"
 						       name="submit"
-						       class="seen-movie tooltip"
-						       title="I've seen this movie!" 
+						       class="seen-movie"
 						       src="./img/eyeball.png">
 					</form>
 				</div>
