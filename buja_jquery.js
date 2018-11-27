@@ -87,10 +87,9 @@ $(document).ready(function(){
 	});
 
 	$('.seen-movie').on('mouseover', function() {
-		$('.seen-movie').tooltipster({
-			content:"I've already seen this movie!",
+		$('.tooltip').tooltipster({
 			theme:'tooltipster-punk'
 		});
-		$('.seen-movie').tooltipster('show');
+		$('.tooltip').tooltipster('show');
 	});
 });
