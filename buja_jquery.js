@@ -84,6 +84,7 @@ $(document).ready(function(){
 		$.post('comments_handler.php', {movieId: movieId, comment: comment}, function(data, status) {
 			$('.movie-comments').html(data);
 		});
+		$('#comment').text('');
 	});
 
 	$('.seen-movie').tooltipster({
