@@ -86,10 +86,8 @@ $(document).ready(function(){
 		});
 	});
 
-	$('.seen-movie').on('mouseover', function() {
 		$('.seen-movie').tooltipster({
 			content: "I've already seen this movie!",
 			theme:'tooltipster-punk'
 		});
-	});
 });
