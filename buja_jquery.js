@@ -86,5 +86,5 @@ $(document).ready(function(){
 		});
 	});
 
-	$('.tooltip').tooltipster();
+	$('.tooltip').tooltipster('show');
 });
