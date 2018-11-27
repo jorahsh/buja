@@ -17,6 +17,7 @@ if (!isset($_SESSION['user'])) {
 $m_dao = new Movie_Dao();
 $c_dao = new COmments_Dao();
 $user = $_SESSION['user'];
+$selected_genre = $_SESSION['genre'];
 $movies = $m_dao->getMoviesUserHasNotSeen($user);
 $genres = array();
 
@@ -25,7 +26,7 @@ foreach($movies as $movie) {
 	$genres = array_unique($genres);
 }
 
-if(isset($_SESSION['genre'])) {
+if(!empty($selected_genre)) {
 	$new_movies = array();
 	foreach($movies as $movie) {
 		if(strpos($movie['genre'], $_SESSION['genre']) !== false) {
@@ -177,7 +178,9 @@ foreach($genres as $genre){ ?>
 			<div class="select-genre">
 				<form method="post" action="main_handler.php">
 					<input type="hidden" name="genre" value=<?php echo '"'.$genre.'"'; ?>>
-					<input type="submit" class="genre-tab" value=<?php echo '"'.$genre.'"'; ?>>
+					<input type="submit" class="genre-tab 
+				<?php if($genre === $selected_genre){echo 'selected-genre'; ?>" 
+						value=<?php echo '"'.$genre.'"'; ?>>
 				</form>
 			</div>
 <?php	}

@@ -247,6 +247,11 @@ form:hover > .seen-movie {
 	padding: 10px;
 }
 
+.selected-genre {
+	background-color: #87CEFA;
+	opacity: 0.9;
+}
+
 .genre-tab {
 	border-style: outset;
 	background-color: #AAA;
