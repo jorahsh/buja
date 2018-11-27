@@ -91,6 +91,5 @@ $(document).ready(function(){
 			content: "I've already seen this movie!",
 			theme:'tooltipster-punk'
 		});
-		$('.seen-movie').tooltipster('show');
 	});
 });
